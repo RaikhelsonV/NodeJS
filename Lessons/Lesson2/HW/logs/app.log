@@ -1,0 +1,10 @@
+Date: 24.02.2024, 22:04:28, category: app.js, level: WARN, message: {"apple":"apple","banana":"banana"}
+Date: 24.02.2024, 22:04:55, category: app.js, level: WARN, message: {"apple":"apple","banana":"banana"}
+Date: 24.02.2024, 22:05:09, category: app.js, level: WARN, message: {"apple":"apple","banana":"banana"}
+Date: 24.02.2024, 22:05:42, category: app.js, level: WARN, message: {"apple":"apple","banana":"banana"}
+Date: 24.02.2024, 22:13:49, category: app.js, level: WARN, message: {"apple":"apple","banana":"banana"}
+Date: 24.02.2024, 22:16:22, category: app.js, level: TRACE, message: "Some trace data"
+Date: 24.02.2024, 22:22:24, category: app.js, level: INFO, message: {"yellow":"yellow","red":"red"}
+Date: 24.02.2024, 22:22:24, category: math.js, level: INFO, message: "First operand: 2"
+Date: 24.02.2024, 22:22:24, category: math.js, level: INFO, message: "Second operand: 5"
+Date: 24.02.2024, 22:22:59, category: app.js, level: TRACE, message: "Some trace data"
