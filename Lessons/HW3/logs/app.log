@@ -1,0 +1,76 @@
+Date: 24.02.2024, 22:04:28, category: app.js, level: WARN, message: {"apple":"apple","banana":"banana"}
+Date: 24.02.2024, 22:04:55, category: app.js, level: WARN, message: {"apple":"apple","banana":"banana"}
+Date: 24.02.2024, 22:05:09, category: app.js, level: WARN, message: {"apple":"apple","banana":"banana"}
+Date: 24.02.2024, 22:05:42, category: app.js, level: WARN, message: {"apple":"apple","banana":"banana"}
+Date: 24.02.2024, 22:13:49, category: app.js, level: WARN, message: {"apple":"apple","banana":"banana"}
+Date: 24.02.2024, 22:16:22, category: app.js, level: TRACE, message: "Some trace data"
+Date: 24.02.2024, 22:22:24, category: app.js, level: INFO, message: {"yellow":"yellow","red":"red"}
+Date: 24.02.2024, 22:22:24, category: math.js, level: INFO, message: "First operand: 2"
+Date: 24.02.2024, 22:22:24, category: math.js, level: INFO, message: "Second operand: 5"
+Date: 24.02.2024, 22:22:59, category: app.js, level: TRACE, message: "Some trace data"
+Date: 2/25/2024, 7:37:08 AM, category: app.js, level: TRACE, message: "Some trace data"
+Date: 2/25/2024, 8:39:09 AM, category: app.js, level: TRACE, message: "Some trace data"
+Date: 2/25/2024, 8:40:09 AM, category: app.js, level: TRACE, message: "Some trace data"
+Date: 2/25/2024, 8:41:49 AM, category: app.js, level: TRACE, message: "Some trace data"
+Date: 2/25/2024, 8:42:10 AM, category: app.js, level: TRACE, message: "Some trace data"
+Date: 2/25/2024, 8:43:31 AM, category: app.js, level: TRACE, message: "Some trace data"
+Date: 2/25/2024, 8:43:52 AM, category: app.js, level: TRACE, message: "Some trace data"
+Date: 2/25/2024, 8:44:24 AM, category: app.js, level: TRACE, message: "Some trace data"
+Date: 2/25/2024, 8:44:46 AM, category: app.js, level: TRACE, message: "Some trace data"
+Date: 2/25/2024, 8:45:00 AM, category: app.js, level: TRACE, message: "Some trace data"
+Date: 2/25/2024, 8:45:33 AM, category: app.js, level: TRACE, message: "Some trace data"
+Date: 2/25/2024, 8:46:07 AM, category: app.js, level: TRACE, message: "Some trace data"
+{"date":"2/25/2024, 8:47:03 AM","level":"TRACE","category":"app.js","message":"Some trace data"}
+Date: 2/25/2024, 8:50:28 AM, category: app.js, level: TRACE, message: "Some trace data"
+Date: 2/25/2024, 8:51:07 AM, category: app.js, level: TRACE, message: "Some trace data"
+Date: 2/25/2024, 8:51:41 AM, category: app.js, level: TRACE, message: "Some trace data"
+{"date":"2/25/2024, 8:51:56 AM","level":"TRACE","category":"app.js","message":"Some trace data"}
+2/25/2024, 8:52:47 AM,TRACE,app.js,"Some trace data"
+[object Object]
+[object Object]
+[object Object]
+undefined
+undefined
+[object Object]
+[object Object]
+undefined
+undefined
+undefined
+undefined
+undefined
+[object Object]
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+
+[object Object]
+
+[object Object]
+
+undefined
+date,level,category,message
+"2/25/2024, 10:21:59 AM",TRACE,app.js,Some trace data
+{"date":"2/25/2024, 10:22:25 AM","level":"TRACE","category":"app.js","message":"Some trace data"}
+{"date":"2/25/2024, 11:04:53 AM","level":"TRACE","category":"app.js","message":"Some trace data"}
+[object Object]
+[object Object]
+[object Object]
+{"date":"2/25/2024, 2:39:39 PM","level":"TRACE","category":"app.js","message":"Some trace data"}
+date,level,category,message
+"2/25/2024, 4:35:01 PM",TRACE,app.js,Some trace data
+{"date":"2/25/2024, 4:35:21 PM","level":"TRACE","category":"app.js","message":"Some trace data"}
+{"date":"2/25/2024, 5:06:18 PM","level":"TRACE","category":"app.js","message":"Some trace data"}
+date,level,category,message
+"2/25/2024, 5:06:36 PM",TRACE,app.js,Some trace data
+date,level,category,message
+"2/25/2024, 5:20:26 PM",TRACE,app.js,"[""Some trace data"",""Data"",""User:""]"
+date,level,category,message
+"2/25/2024, 5:21:50 PM",TRACE,app.js,Some trace data Data User:
+{"date":"2/25/2024, 5:22:14 PM","level":"TRACE","category":"app.js","message":"Some trace data Data User:"}
+{"date":"2/25/2024, 5:22:43 PM","level":"TRACE","category":"app.js","message":"Some trace data, Data, User:"}
