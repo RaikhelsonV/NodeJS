@@ -3,10 +3,6 @@ import * as constants from '../constants.js';
 import { formatMessage } from './utils.js';
 
 async function fileAppender(date, level, category, message, formatter) {
-    const logFile =
-        level === constants.level.ERROR
-            ? constants.files.LOG_ERROR_FILE
-            : constants.files.LOG_FILE;
     const logMessage = await formatMessage(
         date,
         level,
@@ -14,7 +10,10 @@ async function fileAppender(date, level, category, message, formatter) {
         message,
         formatter
     );
-    await appendToFile(logFile, logMessage);
+    await appendToFile(constants.files.LOG_FILE, logMessage);
+    if (level === constants.level.ERROR) {
+        await appendToFile(constants.files.LOG_ERROR_FILE, logMessage);
+    }
 }
 
 async function appendToFile(logFile, data) {
