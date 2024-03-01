@@ -23,15 +23,17 @@ const logger = (category) => ({
 const appender = appenderStrategy.getAppender();
 
 function executeLog(level, category, message) {
-    if (constants.scoreLevel[level] === config.scoreLevel) {
+    if (constants.scoreLevel[level] < config.scoreLevel) {
         appender.log(formatDate(), level, category, message);
     }
 }
 
 function formatDate() {
-    const currentTimeInMillis = Date.now();
-    const currentDate = new Date(currentTimeInMillis);
-    return currentDate.toLocaleString();
+    const currentDate = new Date();
+    const formattedDate = `${currentDate.getFullYear()}-${
+        currentDate.getMonth() + 1
+    }-${currentDate.getDate()} ${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`;
+    return formattedDate;
 }
 
 export default {
