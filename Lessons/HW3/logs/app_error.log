@@ -3,3 +3,8 @@ Date: 24.02.2024, 22:03:08, category: app.js, level: ERROR, message: "ERROR occu
 Date: 24.02.2024, 22:04:10, category: app.js, level: ERROR, message: "ERROR occur: My log"
 Date: 24.02.2024, 22:05:42, category: app.js, level: ERROR, message: "ERROR occur: My log"
 Date: 24.02.2024, 22:13:49, category: app.js, level: ERROR, message: "ERROR occur: My log"
+{"date":"2024-3-1 14:26:35","level":"ERROR","category":"app.js","message":"ERROR occur: My log"}
+2024-3-1 14:32:6,ERROR,app.js,ERROR occur: My log
+2024-3-1 14:44:23,ERROR,app.js,ERROR occur: My log
+2024-3-1 14:46:18,ERROR,app.js,ERROR occur: My log
+2024-3-1 14:47:0,ERROR,app.js,ERROR occur: My log

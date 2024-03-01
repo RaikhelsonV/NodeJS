@@ -74,3 +74,29 @@ date,level,category,message
 "2/25/2024, 5:21:50 PM",TRACE,app.js,Some trace data Data User:
 {"date":"2/25/2024, 5:22:14 PM","level":"TRACE","category":"app.js","message":"Some trace data Data User:"}
 {"date":"2/25/2024, 5:22:43 PM","level":"TRACE","category":"app.js","message":"Some trace data, Data, User:"}
+{"date":"01.03.2024, 12:57:57","level":"TRACE","category":"app.js","message":"Some trace data, Data, User"}
+{"date":"2024-3-1 14:26:35","level":"INFO","category":"app.js","message":"[object Object]"}
+{"date":"2024-3-1 14:26:35","level":"DEBUG","category":"app.js","message":"Some debug data"}
+{"date":"2024-3-1 14:26:35","level":"WARN","category":"app.js","message":"[object Object]"}
+{"date":"2024-3-1 14:26:35","level":"INFO","category":"math.js","message":"First operand: 2"}
+{"date":"2024-3-1 14:26:35","level":"INFO","category":"math.js","message":"Second operand: 5"}
+2024-3-1 14:32:6,WARN,app.js,[object Object]
+2024-3-1 14:32:6,INFO,app.js,[object Object]
+2024-3-1 14:32:6,INFO,math.js,First operand: 2
+2024-3-1 14:32:6,DEBUG,app.js,Some debug data
+2024-3-1 14:32:6,INFO,math.js,Second operand: 5
+2024-3-1 14:44:23,INFO,app.js,[object Object]
+2024-3-1 14:44:23,WARN,app.js,[object Object]
+2024-3-1 14:44:23,INFO,math.js,Second operand: 5
+2024-3-1 14:44:23,INFO,math.js,First operand: 2
+2024-3-1 14:44:23,DEBUG,app.js,Some debug data
+2024-3-1 14:46:18,INFO,app.js,[object Object]
+2024-3-1 14:46:18,WARN,app.js,[object Object]
+2024-3-1 14:46:18,DEBUG,app.js,Some debug data
+2024-3-1 14:46:18,INFO,math.js,First operand: 2
+2024-3-1 14:46:18,INFO,math.js,Second operand: 5
+2024-3-1 14:47:0,INFO,app.js,[object Object]
+2024-3-1 14:47:0,WARN,app.js,[object Object]
+2024-3-1 14:47:0,DEBUG,app.js,Some debug data
+2024-3-1 14:47:0,INFO,math.js,First operand: 2
+2024-3-1 14:47:0,INFO,math.js,Second operand: 5
