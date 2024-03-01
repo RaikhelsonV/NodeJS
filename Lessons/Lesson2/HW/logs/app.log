@@ -8,3 +8,125 @@ Date: 24.02.2024, 22:22:24, category: app.js, level: INFO, message: {"yellow":"y
 Date: 24.02.2024, 22:22:24, category: math.js, level: INFO, message: "First operand: 2"
 Date: 24.02.2024, 22:22:24, category: math.js, level: INFO, message: "Second operand: 5"
 Date: 24.02.2024, 22:22:59, category: app.js, level: TRACE, message: "Some trace data"
+Date: 28.02.2024, 15:34:20, category: app.js, level: TRACE, message: "Some trace data"
+Date: 01.03.2024, 11:59:20, category: app.js, level: TRACE, message: "Some trace data"
+Date: 01.03.2024, 13:01:19, category: app.js, level: INFO, message: {"yellow":"yellow","red":"red"}
+Date: 01.03.2024, 13:01:19, category: app.js, level: WARN, message: {"apple":"apple","banana":"banana"}
+Date: 01.03.2024, 13:01:19, category: app.js, level: DEBUG, message: "Some debug data"
+Date: 01.03.2024, 13:01:19, category: math.js, level: INFO, message: "First operand: 2"
+Date: 01.03.2024, 13:01:19, category: math.js, level: INFO, message: "Second operand: 5"
+Date: function getTime() { [native code] }, category: app.js, level: INFO, message: {"yellow":"yellow","red":"red"}
+Date: function getTime() { [native code] }, category: app.js, level: WARN, message: {"apple":"apple","banana":"banana"}
+Date: function getTime() { [native code] }, category: app.js, level: DEBUG, message: "Some debug data"
+Date: function getTime() { [native code] }, category: math.js, level: INFO, message: "First operand: 2"
+Date: function getTime() { [native code] }, category: math.js, level: INFO, message: "Second operand: 5"
+Date: function getTime() { [native code] }, category: app.js, level: INFO, message: {"yellow":"yellow","red":"red"}
+Date: function getTime() { [native code] }, category: app.js, level: WARN, message: {"apple":"apple","banana":"banana"}
+Date: function getTime() { [native code] }, category: app.js, level: DEBUG, message: "Some debug data"
+Date: function getTime() { [native code] }, category: math.js, level: INFO, message: "First operand: 2"
+Date: function getTime() { [native code] }, category: math.js, level: INFO, message: "Second operand: 5"
+Date: 1709291153645, category: app.js, level: INFO, message: {"yellow":"yellow","red":"red"}
+Date: 1709291153646, category: app.js, level: WARN, message: {"apple":"apple","banana":"banana"}
+Date: 1709291153646, category: app.js, level: DEBUG, message: "Some debug data"
+Date: 1709291153646, category: math.js, level: INFO, message: "First operand: 2"
+Date: 1709291153647, category: math.js, level: INFO, message: "Second operand: 5"
+Date: Fri Mar 01 2024 13:11:24 GMT+0200 (Израиль, стандартное время), category: app.js, level: INFO, message: {"yellow":"yellow","red":"red"}
+Date: Fri Mar 01 2024 13:11:24 GMT+0200 (Израиль, стандартное время), category: app.js, level: WARN, message: {"apple":"apple","banana":"banana"}
+Date: Fri Mar 01 2024 13:11:24 GMT+0200 (Израиль, стандартное время), category: app.js, level: DEBUG, message: "Some debug data"
+Date: Fri Mar 01 2024 13:11:24 GMT+0200 (Израиль, стандартное время), category: math.js, level: INFO, message: "First operand: 2"
+Date: Fri Mar 01 2024 13:11:24 GMT+0200 (Израиль, стандартное время), category: math.js, level: INFO, message: "Second operand: 5"
+Date: 13:21:14, category: app.js, level: INFO, message: {"yellow":"yellow","red":"red"}
+Date: 13:21:14, category: app.js, level: WARN, message: {"apple":"apple","banana":"banana"}
+Date: 13:21:14, category: app.js, level: DEBUG, message: "Some debug data"
+Date: 13:21:14, category: math.js, level: INFO, message: "First operand: 2"
+Date: 13:21:14, category: math.js, level: INFO, message: "Second operand: 5"
+Date: function formatDate() {
+    const currentDate = new Date();
+    const formattedDate = `${currentDate.getFullYear()}-${
+        currentDate.getMonth() + 1
+    }-${currentDate.getDate()} ${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`;
+    console.log(formattedDate);
+    return formatDate;
+}, category: app.js, level: INFO, message: {"yellow":"yellow","red":"red"}
+Date: function formatDate() {
+    const currentDate = new Date();
+    const formattedDate = `${currentDate.getFullYear()}-${
+        currentDate.getMonth() + 1
+    }-${currentDate.getDate()} ${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`;
+    console.log(formattedDate);
+    return formatDate;
+}, category: app.js, level: WARN, message: {"apple":"apple","banana":"banana"}
+Date: function formatDate() {
+    const currentDate = new Date();
+    const formattedDate = `${currentDate.getFullYear()}-${
+        currentDate.getMonth() + 1
+    }-${currentDate.getDate()} ${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`;
+    console.log(formattedDate);
+    return formatDate;
+}, category: app.js, level: DEBUG, message: "Some debug data"
+Date: function formatDate() {
+    const currentDate = new Date();
+    const formattedDate = `${currentDate.getFullYear()}-${
+        currentDate.getMonth() + 1
+    }-${currentDate.getDate()} ${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`;
+    console.log(formattedDate);
+    return formatDate;
+}, category: math.js, level: INFO, message: "First operand: 2"
+Date: function formatDate() {
+    const currentDate = new Date();
+    const formattedDate = `${currentDate.getFullYear()}-${
+        currentDate.getMonth() + 1
+    }-${currentDate.getDate()} ${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`;
+    console.log(formattedDate);
+    return formatDate;
+}, category: math.js, level: INFO, message: "Second operand: 5"
+Date: function formatDate() {
+    const currentDate = new Date();
+    const formattedDate = `${currentDate.getFullYear()}-${
+        currentDate.getMonth() + 1
+    }-${currentDate.getDate()} ${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`;
+    return formatDate;
+}, category: app.js, level: INFO, message: {"yellow":"yellow","red":"red"}
+Date: function formatDate() {
+    const currentDate = new Date();
+    const formattedDate = `${currentDate.getFullYear()}-${
+        currentDate.getMonth() + 1
+    }-${currentDate.getDate()} ${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`;
+    return formatDate;
+}, category: app.js, level: WARN, message: {"apple":"apple","banana":"banana"}
+Date: function formatDate() {
+    const currentDate = new Date();
+    const formattedDate = `${currentDate.getFullYear()}-${
+        currentDate.getMonth() + 1
+    }-${currentDate.getDate()} ${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`;
+    return formatDate;
+}, category: app.js, level: DEBUG, message: "Some debug data"
+Date: function formatDate() {
+    const currentDate = new Date();
+    const formattedDate = `${currentDate.getFullYear()}-${
+        currentDate.getMonth() + 1
+    }-${currentDate.getDate()} ${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`;
+    return formatDate;
+}, category: math.js, level: INFO, message: "First operand: 2"
+Date: function formatDate() {
+    const currentDate = new Date();
+    const formattedDate = `${currentDate.getFullYear()}-${
+        currentDate.getMonth() + 1
+    }-${currentDate.getDate()} ${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`;
+    return formatDate;
+}, category: math.js, level: INFO, message: "Second operand: 5"
+Date: 2024-3-1 14:14:6, category: app.js, level: INFO, message: {"yellow":"yellow","red":"red"}
+Date: 2024-3-1 14:14:6, category: app.js, level: WARN, message: {"apple":"apple","banana":"banana"}
+Date: 2024-3-1 14:14:6, category: app.js, level: DEBUG, message: "Some debug data"
+Date: 2024-3-1 14:14:6, category: math.js, level: INFO, message: "First operand: 2"
+Date: 2024-3-1 14:14:6, category: math.js, level: INFO, message: "Second operand: 5"
+Date: 2024-3-1 14:14:24, category: app.js, level: INFO, message: {"yellow":"yellow","red":"red"}
+Date: 2024-3-1 14:14:24, category: app.js, level: WARN, message: {"apple":"apple","banana":"banana"}
+Date: 2024-3-1 14:14:24, category: app.js, level: DEBUG, message: "Some debug data"
+Date: 2024-3-1 14:14:24, category: math.js, level: INFO, message: "First operand: 2"
+Date: 2024-3-1 14:14:24, category: math.js, level: INFO, message: "Second operand: 5"
+Date: 2024-3-1 14:18:13, category: app.js, level: INFO, message: {"yellow":"yellow","red":"red"}
+Date: 2024-3-1 14:18:13, category: app.js, level: WARN, message: {"apple":"apple","banana":"banana"}
+Date: 2024-3-1 14:18:13, category: app.js, level: DEBUG, message: "Some debug data"
+Date: 2024-3-1 14:18:13, category: math.js, level: INFO, message: "First operand: 2"
+Date: 2024-3-1 14:18:13, category: math.js, level: INFO, message: "Second operand: 5"
