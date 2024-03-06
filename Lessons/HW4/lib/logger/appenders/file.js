@@ -5,37 +5,21 @@ import { formatMessage } from './utils.js';
 import path from 'path';
 import { Transform } from 'stream';
 
-const ee = new EventEmitter();
-
-async function fileAppender(date, level, category, message, formatter) {
-    const logMessage = await formatMessage(
-        date,
-        level,
-        category,
-        message,
-        formatter,
-        process.argv[1]
-    );
-    ee.emit('log', logMessage, level);
-}
-
-ee.on('log', async (logMessage, level) => {
-    await appendToFile(path.join(constants.files.LOG_FILE), logMessage);
-    if (level === constants.level.ERROR) {
-        await appendToFile(
-            path.join(constants.files.LOG_ERROR_FILE),
-            logMessage
-        );
+class LogTransformer extends Transform {
+    constructor(options) {
+        super(options);
     }
-});
 
-async function appendToFile(logFile, data) {
-    const writeStream = fs.createWriteStream(logFile, { flags: 'a' });
+    async _transform(chunk, encoding, callback) {
+        try {
+            if (
+                constants.format.JSON === true ||
+                constants.format.CSV === true
+            ) {
+                const logData = constants.format.JSON
+                    ? JSON.parse(chunk)
+                    : chunk.toString('utf8');
 
-    const transform = new Transform({
-        async transform(chunk, encoding, callback) {
-            try {
-                const logData = JSON.parse(chunk);
                 const formattedData = await formatMessage([
                     logData.date,
                     logData.level,
@@ -47,16 +31,53 @@ async function appendToFile(logFile, data) {
 
                 this.push(formattedData.toString());
                 callback();
-            } catch (error) {
-                callback(error); // Передаем ошибку в колбэк
+            } else {
+                const logData = chunk.toString('utf8');
+                this.push(logData.toString());
+                callback();
             }
-        },
-    });
+        } catch (error) {
+            callback(error);
+        }
+    }
+}
 
-    transform.pipe(writeStream);
+const ee = new EventEmitter();
+let logFile = path.join(constants.files.LOG_FILE);
 
-    transform.write(data);
-    transform.end();
+const writeStream = fs.createWriteStream(logFile, { flags: 'a' });
+const logTransform = new LogTransformer();
+logTransform.pipe(writeStream);
+
+async function fileAppender(date, level, category, message, formatter) {
+    const logMessage = await formatMessage(
+        date,
+        level,
+        category,
+        message,
+        formatter,
+        constants.logFileName
+    );
+
+    ee.emit('log', logMessage, level);
+}
+
+ee.on('log', async (logMessage, level) => {
+    await appendToFile(logMessage, level);
+});
+
+async function appendToFile(data, level) {
+    if (constants.level.ERROR === level) {
+        logFile = constants.files.LOG_ERROR_FILE;
+        const errorWriteStream = fs.createWriteStream(logFile, { flags: 'a' });
+        logTransform.pipe(errorWriteStream);
+        errorWriteStream.write(data);
+    }
+    writeStream.write(data);
+}
+
+process.on('exit', () => {
+    logTransform.end();
 
     writeStream.on('finish', () => {
         console.log('File closed.');
@@ -65,5 +86,6 @@ async function appendToFile(logFile, data) {
     writeStream.on('error', (error) => {
         console.error('Error writing to log file:', error);
     });
-}
+});
+
 export default { log: fileAppender };

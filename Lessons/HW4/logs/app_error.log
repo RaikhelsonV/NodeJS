@@ -92,3 +92,25 @@ Date: 2024-3-3 0:21:59, category: app.js, level: ERROR, message: occur: My log, 
 Date: [object Object], category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: [object Object], category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: 2024-3-3 0:31:18,ERROR,app.js,occur: My log,,D:\NodeJS\Lessons\HW4\app.js, category: undefined, level: undefined, message: undefined, fileName: undefined
+Date: ,,,,,, category: undefined, level: undefined, message: undefined, fileName: undefined
+Date: ,,,,,, category: undefined, level: undefined, message: undefined, fileName: undefined
+Date: ,,,,,, category: undefined, level: undefined, message: undefined, fileName: undefined
+Date: ,,,,,, category: undefined, level: undefined, message: undefined, fileName: undefined
+Date: 2024-3-5 22:27:38,ERROR,app.js,occur: My log,,D:\NodeJS\Lessons\HW4\app.js, category: undefined, level: undefined, message: undefined, fileName: undefined
+Date: 2024-3-5 22:35:31,ERROR,app.js,occur: My log,,D:\NodeJS\Lessons\HW4\app.js, category: undefined, level: undefined, message: undefined, fileName: undefined
+[object Object][object Object][object Object]Date: ,,,,,, category: undefined, level: undefined, message: undefined, fileName: undefined
+Date: ,,,,,, category: undefined, level: undefined, message: undefined, fileName: undefined
+Date: 2024-3-5 23:34:2, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
+Date: 2024-3-5 23:41:5, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
+{"date":"2024-3-5 23:41:33","level":"ERROR","category":"app.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
+2024-3-5 23:45:43,ERROR,app.js,occur: My log,D:\NodeJS\Lessons\HW4\app.js
+2024-3-6 0:4:46,ERROR,app.js,occur: My log,D:\NodeJS\Lessons\HW4\app.js
+{"date":"2024-3-6 0:5:13","level":"ERROR","category":"app.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
+Date: 2024-3-6 0:5:31, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
+Date: 2024-3-6 0:16:56, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
+Date: 2024-3-6 1:1:13, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
+Date: 2024-3-6 1:1:13, category: app.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\app.js
+Date: 2024-3-6 1:1:13, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\app.js
+Date: 2024-3-6 1:1:13, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\app.js
+Date: 2024-3-6 1:6:44, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
+{"date":"2024-3-6 8:53:23","level":"ERROR","category":"app.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}

@@ -1,6 +1,7 @@
 import { EventEmitter } from 'events';
 import { formatMessage } from './utils.js';
 import { Writable } from 'stream';
+import * as constants from '../constants.js';
 
 const ee = new EventEmitter();
 
@@ -18,7 +19,7 @@ function consoleAppender(date, level, category, message, formatter) {
         category,
         message,
         formatter,
-        filename: process.argv[1],
+        filename: constants.logFileName,
     };
     ee.emit('log', logMessage);
 }

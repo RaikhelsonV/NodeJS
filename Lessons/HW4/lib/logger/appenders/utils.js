@@ -1,6 +1,5 @@
 import * as constants from '../constants.js';
 import { stringify } from 'csv-stringify';
-import { Transform } from 'stream';
 
 async function formatMessage(
     date,
@@ -11,10 +10,8 @@ async function formatMessage(
     fileName
 ) {
     if (formatter === constants.format.JSON) {
-        console.log('ssssssssssssssssss');
         return formatJSON({ date, level, category, message, fileName });
     } else if (formatter === constants.format.CSV) {
-        console.log('ffffffffffffff');
         return formatCSV([{ date, level, category, message, fileName }]);
     } else {
         return formatDefault({ date, level, category, message, fileName });
