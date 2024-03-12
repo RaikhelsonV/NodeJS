@@ -34,7 +34,11 @@ const format = {
 const network = {
     host: '127.0.0.1',
     socketPort: 8001,
+<<<<<<< HEAD
     httpPort: 8081,
+=======
+    httpPort: 8080,
+>>>>>>> 617b935fe45a10665a643cbf9fb0941045b7cb54
 };
 
 const delimetter = ', ';

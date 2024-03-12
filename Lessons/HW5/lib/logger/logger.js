@@ -45,6 +45,7 @@ const appender = appenderStrategy.getAppender();
 
 async function executeLog(level, category, message) {
     if (constants.scoreLevel[level] < config.scoreLevel) {
+<<<<<<< HEAD
         await addToLogCache(
             formatDate(),
             level,
@@ -53,6 +54,8 @@ async function executeLog(level, category, message) {
             config.formatter,
             constants.logFileName
         );
+=======
+>>>>>>> 617b935fe45a10665a643cbf9fb0941045b7cb54
         appender.log(formatDate(), level, category, message, config.formatter);
     }
 }
