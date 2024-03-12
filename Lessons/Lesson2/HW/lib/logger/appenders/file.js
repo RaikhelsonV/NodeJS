@@ -8,14 +8,11 @@ function fileAppender(date, level, category, message) {
         level === constants.level.ERROR
             ? constants.files.LOG_ERROR_FILE
             : constants.files.LOG_FILE;
-    createFile(logFile, logMessage);
+    appendToFile(logFile, logMessage);
 }
 
-function createFile(logFile, logMessage) {
+function appendToFile(logFile, logMessage) {
     try {
-        if (!fs.existsSync(logFile)) {
-            fs.writeFileSync(logFile, '');
-        }
         fs.appendFileSync(logFile, logMessage, { flag: 'a' });
     } catch (err) {
         console.error('Error writing to log file:', err);

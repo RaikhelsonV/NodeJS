@@ -6,7 +6,8 @@ import { add } from './math.js';
 const log = logger.getLogger('app.js');
 log.info(color);
 log.warn(fruit);
-log.error('ERROR occur: My log');
+log.error('occur: My log');
+
 log.debug('Some debug data');
-log.trace('Some trace data');
+log.trace('Some trace data', 'Data', 'User');
 add(2, 5);
