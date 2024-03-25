@@ -31,5 +31,4 @@ async function connectAndQuery() {
     }
 }
 
-// Экспортируем объект client вместе с методом query
 export { connectAndQuery, client };

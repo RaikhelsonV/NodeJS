@@ -9,13 +9,17 @@ export default class UrlController extends Router {
         super();
         this.urlService = new UrlService();
         this.userRepository = new UserRepository();
-        this.use(authMiddleware);
+        // this.use(authMiddleware);
         this.init();
     }
 
     init = () => {
         this.post('/add', jsonParser, (req, res) => {
-            console.log('body:' + JSON.stringify(req.body));
+            this.userRepository.getUserByName('Val');
+            this.userRepository.getUserById('1');
+            this.userRepository.getAll();
+
+            console.log('body:' + JSON.stringify(req.body, req.user));
             const code = this.urlService.addUrl(req.body, req.user);
             res.json({ code });
         });

@@ -20,22 +20,33 @@ export default class UserRepository {
     }
 
     async getUserById(userId) {
-        const query = queries.SELECT_USER_BY_ID;
-        const result = await client.query(query, [userId]);
-        console.log('DB' + result.rows[0]);
-        return result.rows[0];
-    }
-
-    getUserByName(name) {
-        for (const user of users.values()) {
-            if (user.name === name) {
-                return user;
-            }
+        try {
+            const query = queries.SELECT_USER_BY_ID;
+            const result = await client.query(query, [userId]);
+            console.log('DB BY id' + JSON.stringify(result.rows[0]));
+            return result.rows[0];
+        } catch (error) {
+            console.error(`Error getting user by id: ${userId}`, error);
+            throw new Error('Failed to get user by id');
         }
-        return null;
     }
 
-    getAll() {
-        return [...users.values()];
+    async getUserByName(name) {
+        try {
+            const query = queries.SELECT_USER_BY_NAME;
+            const result = await client.query(query, [name]);
+            console.log('DB BY NAME' + JSON.stringify(result.rows[0]));
+            return result.rows[0];
+        } catch (error) {
+            console.error(`Error getting user by name: ${name}`, error);
+            throw new Error('Failed to get user by name');
+        }
+    }
+
+    async getAll() {
+        const query = queries.SELECT_ALL_USERS;
+        const result = await client.query(query);
+        console.log('DB All' + JSON.stringify(result.rows));
+        return result.rows;
     }
 }

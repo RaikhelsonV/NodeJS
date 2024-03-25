@@ -1,33 +1,56 @@
+import { client } from '../PostgreSQL/PostgreSQL_Client.js';
+import { queries } from '../PostgreSQL/queries.js';
 const storage = new Map();
 
 export default class UrlRepository {
-    add(url) {
-        storage.set(url.code, url);
-    }
-
-    addVisit(code) {
-        const urlData = storage.get(code);
-        if (urlData) {
-            urlData.visits += 1;
-            storage.set(code, urlData);
+    async add(url) {
+        console.log('URL' + JSON.stringify(url));
+        try {
+            const query = queries.INSERT_URL;
+            const values = [
+                url.code,
+                url.name,
+                url.url,
+                url.created_time,
+                url.userId,
+            ];
+            await client.query(query, values);
+        } catch (error) {
+            console.error('Error saving url:', error);
+            throw new Error('Failed to save url');
         }
     }
 
-    get(code) {
-        return storage.get(code);
+    async addVisit(code) {
+        try {
+            const query = queries.ADD_VISIT;
+            await client.query(query, [code]);
+        } catch (error) {
+            console.error('Error adding visit:', error);
+            throw new Error('Failed to add visit');
+        }
     }
 
-    getUrlByUser(user) {
+    async get(code) {
         try {
-            const userUrls = [];
-            for (const [_, urlData] of storage) {
-                if (urlData.user.userId === user.userId) {
-                    userUrls.push(urlData);
-                }
-            }
-            return userUrls;
+            const query = queries.SELECT_URL_BY_CODE;
+            const result = await client.query(query, [code]);
+            console.log('DB BY code' + JSON.stringify(result.rows[0]));
+            return result.rows[0];
         } catch (error) {
-            throw new Error('Failed to get URLs for user');
+            console.error(`Error getting url by code: ${code}`, error);
+            throw new Error('Failed to get url by code');
+        }
+    }
+
+    async getUrlByUser(user) {
+        try {
+            const query = queries.SELECT_URLS_BY_USER;
+            const result = await client.query(query, [user.userId]);
+            return result.rows;
+        } catch (error) {
+            console.error('Error getting URLs by user:', error);
+            throw new Error('Failed to get URLs by user');
         }
     }
 
