@@ -33,4 +33,4 @@ const format = {
 const delimetter = ', ';
 const logFileName = process.argv[1];
 
-export { level, scoreLevel, appender, files, format, delimetter,logFileName };
+export { level, scoreLevel, appender, files, format, delimetter, logFileName };

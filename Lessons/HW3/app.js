@@ -3,7 +3,7 @@ import fruit from './fruit.js';
 import logger from './lib/logger/logger.js';
 import { add } from './math.js';
 
-const log = logger.getLogger('app.js');
+const log = logger.getLogger('webContext.js');
 log.info(color);
 log.warn(fruit);
 log.error('occur: My log');

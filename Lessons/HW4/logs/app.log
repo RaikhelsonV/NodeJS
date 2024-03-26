@@ -1,28 +1,28 @@
-{"date":"2024-3-2 19:8:4","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 19:11:45","level":"INFO","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 19:11:45","level":"WARN","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 19:11:45","level":"ERROR","category":"app.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 19:11:45","level":"DEBUG","category":"app.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 19:11:45","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 19:11:45","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 19:12:39","level":"INFO","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 19:12:39","level":"WARN","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 19:12:39","level":"ERROR","category":"app.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 19:12:39","level":"DEBUG","category":"app.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 19:12:39","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 19:12:39","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 19:35:39","level":"INFO","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 19:35:39","level":"DEBUG","category":"app.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 19:35:39","level":"WARN","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 19:35:39","level":"ERROR","category":"app.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 19:35:39","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 19:35:39","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 19:42:1","level":"INFO","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 19:42:1","level":"WARN","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 19:42:1","level":"ERROR","category":"app.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 19:42:1","level":"DEBUG","category":"app.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 19:42:1","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 19:42:1","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
+{"date":"2024-3-2 19:8:4","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 19:11:45","level":"INFO","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 19:11:45","level":"WARN","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 19:11:45","level":"ERROR","category":"webContext.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 19:11:45","level":"DEBUG","category":"webContext.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 19:11:45","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 19:11:45","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 19:12:39","level":"INFO","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 19:12:39","level":"WARN","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 19:12:39","level":"ERROR","category":"webContext.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 19:12:39","level":"DEBUG","category":"webContext.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 19:12:39","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 19:12:39","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 19:35:39","level":"INFO","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 19:35:39","level":"DEBUG","category":"webContext.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 19:35:39","level":"WARN","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 19:35:39","level":"ERROR","category":"webContext.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 19:35:39","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 19:35:39","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 19:42:1","level":"INFO","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 19:42:1","level":"WARN","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 19:42:1","level":"ERROR","category":"webContext.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 19:42:1","level":"DEBUG","category":"webContext.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 19:42:1","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 19:42:1","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
 Date: undefined, category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: undefined, category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: undefined, category: undefined, level: undefined, message: undefined, fileName: undefined
@@ -65,18 +65,18 @@ Date: undefined, category: undefined, level: undefined, message: undefined, file
 Date: undefined, category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: undefined, category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: undefined, category: undefined, level: undefined, message: undefined, fileName: undefined
-{"date":"2024-3-2 20:51:41","level":"INFO","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 20:51:41","level":"WARN","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 20:51:41","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 20:51:41","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 20:51:41","level":"ERROR","category":"app.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 20:51:41","level":"DEBUG","category":"app.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 20:52:20","level":"INFO","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 20:52:20","level":"WARN","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 20:52:20","level":"DEBUG","category":"app.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 20:52:20","level":"ERROR","category":"app.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 20:52:20","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 20:52:20","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
+{"date":"2024-3-2 20:51:41","level":"INFO","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 20:51:41","level":"WARN","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 20:51:41","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 20:51:41","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 20:51:41","level":"ERROR","category":"webContext.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 20:51:41","level":"DEBUG","category":"webContext.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 20:52:20","level":"INFO","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 20:52:20","level":"WARN","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 20:52:20","level":"DEBUG","category":"webContext.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 20:52:20","level":"ERROR","category":"webContext.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 20:52:20","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 20:52:20","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
 Date: undefined, category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: undefined, category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: undefined, category: undefined, level: undefined, message: undefined, fileName: undefined
@@ -119,24 +119,24 @@ Date: undefined, category: undefined, level: undefined, message: undefined, file
 Date: undefined, category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: undefined, category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: undefined, category: undefined, level: undefined, message: undefined, fileName: undefined
-{"date":"2024-3-2 20:55:2","level":"INFO","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 20:55:2","level":"WARN","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 20:55:2","level":"ERROR","category":"app.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 20:55:2","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 20:55:2","level":"DEBUG","category":"app.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 20:55:2","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 21:26:19","level":"INFO","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 21:26:19","level":"WARN","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 21:26:19","level":"DEBUG","category":"app.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 21:26:19","level":"ERROR","category":"app.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 21:26:19","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 21:26:19","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 21:27:54","level":"INFO","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 21:27:54","level":"WARN","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 21:27:54","level":"ERROR","category":"app.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 21:27:54","level":"DEBUG","category":"app.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 21:27:54","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 21:27:54","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
+{"date":"2024-3-2 20:55:2","level":"INFO","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 20:55:2","level":"WARN","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 20:55:2","level":"ERROR","category":"webContext.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 20:55:2","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 20:55:2","level":"DEBUG","category":"webContext.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 20:55:2","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 21:26:19","level":"INFO","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 21:26:19","level":"WARN","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 21:26:19","level":"DEBUG","category":"webContext.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 21:26:19","level":"ERROR","category":"webContext.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 21:26:19","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 21:26:19","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 21:27:54","level":"INFO","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 21:27:54","level":"WARN","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 21:27:54","level":"ERROR","category":"webContext.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 21:27:54","level":"DEBUG","category":"webContext.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 21:27:54","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 21:27:54","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
 Date: undefined, category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: undefined, category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: undefined, category: undefined, level: undefined, message: undefined, fileName: undefined
@@ -347,24 +347,24 @@ Date: undefined, category: undefined, level: undefined, message: undefined, file
 Date: undefined, category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: undefined, category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: undefined, category: undefined, level: undefined, message: undefined, fileName: undefined
-{"date":"2024-3-2 21:46:31","level":"INFO","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 21:46:31","level":"WARN","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 21:46:31","level":"DEBUG","category":"app.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 21:46:31","level":"ERROR","category":"app.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 21:46:31","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 21:46:31","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 21:46:44","level":"INFO","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 21:46:44","level":"WARN","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 21:46:44","level":"ERROR","category":"app.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 21:46:44","level":"DEBUG","category":"app.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 21:46:44","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 21:46:44","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 21:51:43","level":"INFO","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 21:51:43","level":"WARN","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 21:51:43","level":"ERROR","category":"app.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 21:51:43","level":"DEBUG","category":"app.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 21:51:43","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 21:51:43","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
+{"date":"2024-3-2 21:46:31","level":"INFO","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 21:46:31","level":"WARN","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 21:46:31","level":"DEBUG","category":"webContext.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 21:46:31","level":"ERROR","category":"webContext.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 21:46:31","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 21:46:31","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 21:46:44","level":"INFO","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 21:46:44","level":"WARN","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 21:46:44","level":"ERROR","category":"webContext.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 21:46:44","level":"DEBUG","category":"webContext.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 21:46:44","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 21:46:44","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 21:51:43","level":"INFO","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 21:51:43","level":"WARN","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 21:51:43","level":"ERROR","category":"webContext.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 21:51:43","level":"DEBUG","category":"webContext.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 21:51:43","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 21:51:43","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
 Date: , category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: , category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: , category: undefined, level: undefined, message: undefined, fileName: undefined
@@ -449,48 +449,48 @@ Date: , category: undefined, level: undefined, message: undefined, fileName: und
 Date: , category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: , category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: , category: undefined, level: undefined, message: undefined, fileName: undefined
-{"date":"2024-3-2 22:0:43","level":"INFO","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 22:0:43","level":"WARN","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 22:0:43","level":"ERROR","category":"app.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 22:0:43","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 22:0:43","level":"DEBUG","category":"app.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 22:0:43","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 22:35:15","level":"INFO","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}, fileName: app.js
-{"date":"2024-3-2 22:35:15","level":"WARN","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}, fileName: app.js
-{"date":"2024-3-2 22:35:15","level":"ERROR","category":"app.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}, fileName: app.js
-{"date":"2024-3-2 22:35:15","level":"DEBUG","category":"app.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}, fileName: app.js
-{"date":"2024-3-2 22:35:15","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}, fileName: app.js
-{"date":"2024-3-2 22:35:15","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}, fileName: app.js
-{"date":"2024-3-2 22:37:4","level":"INFO","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 22:37:4","level":"WARN","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 22:37:4","level":"ERROR","category":"app.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 22:37:4","level":"DEBUG","category":"app.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 22:37:4","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 22:37:4","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 22:37:46","level":"INFO","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 22:37:46","level":"WARN","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 22:37:46","level":"ERROR","category":"app.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 22:37:46","level":"DEBUG","category":"app.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 22:37:46","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 22:37:46","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 22:38:49","level":"INFO","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 22:38:49","level":"WARN","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 22:38:49","level":"ERROR","category":"app.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 22:38:49","level":"DEBUG","category":"app.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 22:38:49","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-2 22:38:49","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-[object Promise][object Promise][object Promise][object Promise][object Promise][object Promise]Date: 2024-3-2 22:50:57, category: app.js, level: INFO, message: "[object Object]", fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 22:50:57, category: app.js, level: WARN, message: "[object Object]", fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 22:50:57, category: app.js, level: ERROR, message: "occur: My log", fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 22:50:57, category: app.js, level: DEBUG, message: "Some debug data", fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 22:50:57, category: math.js, level: INFO, message: "First operand: 2", fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 22:50:57, category: math.js, level: INFO, message: "Second operand: 5", fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 22:51:21, category: app.js, level: INFO, message: "[object Object]", fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 22:51:21, category: app.js, level: WARN, message: "[object Object]", fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 22:51:21, category: app.js, level: ERROR, message: "occur: My log", fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 22:51:21, category: app.js, level: DEBUG, message: "Some debug data", fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 22:51:21, category: math.js, level: INFO, message: "First operand: 2", fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 22:51:21, category: math.js, level: INFO, message: "Second operand: 5", fileName: D:\NodeJS\Lessons\HW4\app.js
+{"date":"2024-3-2 22:0:43","level":"INFO","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 22:0:43","level":"WARN","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 22:0:43","level":"ERROR","category":"webContext.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 22:0:43","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 22:0:43","level":"DEBUG","category":"webContext.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 22:0:43","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 22:35:15","level":"INFO","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}, fileName: webContext.js
+{"date":"2024-3-2 22:35:15","level":"WARN","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}, fileName: webContext.js
+{"date":"2024-3-2 22:35:15","level":"ERROR","category":"webContext.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}, fileName: webContext.js
+{"date":"2024-3-2 22:35:15","level":"DEBUG","category":"webContext.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}, fileName: webContext.js
+{"date":"2024-3-2 22:35:15","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}, fileName: webContext.js
+{"date":"2024-3-2 22:35:15","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}, fileName: webContext.js
+{"date":"2024-3-2 22:37:4","level":"INFO","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 22:37:4","level":"WARN","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 22:37:4","level":"ERROR","category":"webContext.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 22:37:4","level":"DEBUG","category":"webContext.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 22:37:4","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 22:37:4","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 22:37:46","level":"INFO","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 22:37:46","level":"WARN","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 22:37:46","level":"ERROR","category":"webContext.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 22:37:46","level":"DEBUG","category":"webContext.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 22:37:46","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 22:37:46","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 22:38:49","level":"INFO","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 22:38:49","level":"WARN","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 22:38:49","level":"ERROR","category":"webContext.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 22:38:49","level":"DEBUG","category":"webContext.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 22:38:49","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-2 22:38:49","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+[object Promise][object Promise][object Promise][object Promise][object Promise][object Promise]Date: 2024-3-2 22:50:57, category: webContext.js, level: INFO, message: "[object Object]", fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 22:50:57, category: webContext.js, level: WARN, message: "[object Object]", fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 22:50:57, category: webContext.js, level: ERROR, message: "occur: My log", fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 22:50:57, category: webContext.js, level: DEBUG, message: "Some debug data", fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 22:50:57, category: math.js, level: INFO, message: "First operand: 2", fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 22:50:57, category: math.js, level: INFO, message: "Second operand: 5", fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 22:51:21, category: webContext.js, level: INFO, message: "[object Object]", fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 22:51:21, category: webContext.js, level: WARN, message: "[object Object]", fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 22:51:21, category: webContext.js, level: ERROR, message: "occur: My log", fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 22:51:21, category: webContext.js, level: DEBUG, message: "Some debug data", fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 22:51:21, category: math.js, level: INFO, message: "First operand: 2", fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 22:51:21, category: math.js, level: INFO, message: "Second operand: 5", fileName: D:\NodeJS\Lessons\HW4\webContext.js
 Date: undefined, category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: undefined, category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: undefined, category: undefined, level: undefined, message: undefined, fileName: undefined
@@ -503,42 +503,42 @@ Date: undefined, category: undefined, level: undefined, message: undefined, file
 Date: undefined, category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: undefined, category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: undefined, category: undefined, level: undefined, message: undefined, fileName: undefined
-Date: 2024-3-2 23:7:34, category: app.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:7:34, category: app.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:7:34, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:7:34, category: app.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:7:34, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:7:34, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:25:38, category: app.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:25:38, category: app.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:25:38, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:25:38, category: app.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:25:38, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:25:38, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:26:18, category: app.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:26:18, category: app.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:26:18, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:26:18, category: app.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:26:18, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:26:18, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:26:44, category: app.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:26:44, category: app.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:26:44, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:26:44, category: app.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:26:44, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:26:44, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:28:2, category: app.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:28:2, category: app.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:28:2, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:28:2, category: app.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:28:2, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:28:2, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:31:8, category: app.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:31:8, category: app.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:31:8, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:31:8, category: app.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:31:8, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-2 23:31:8, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\app.js
+Date: 2024-3-2 23:7:34, category: webContext.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:7:34, category: webContext.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:7:34, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:7:34, category: webContext.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:7:34, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:7:34, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:25:38, category: webContext.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:25:38, category: webContext.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:25:38, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:25:38, category: webContext.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:25:38, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:25:38, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:26:18, category: webContext.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:26:18, category: webContext.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:26:18, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:26:18, category: webContext.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:26:18, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:26:18, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:26:44, category: webContext.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:26:44, category: webContext.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:26:44, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:26:44, category: webContext.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:26:44, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:26:44, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:28:2, category: webContext.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:28:2, category: webContext.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:28:2, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:28:2, category: webContext.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:28:2, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:28:2, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:31:8, category: webContext.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:31:8, category: webContext.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:31:8, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:31:8, category: webContext.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:31:8, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-2 23:31:8, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\webContext.js
 Date: undefined, category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: undefined, category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: undefined, category: undefined, level: undefined, message: undefined, fileName: undefined
@@ -581,18 +581,18 @@ Date: [object Object], category: undefined, level: undefined, message: undefined
 Date: [object Object], category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: [object Object], category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: [object Object], category: undefined, level: undefined, message: undefined, fileName: undefined
-[object Promise][object Promise][object Promise][object Promise][object Promise][object Promise]Date: 2024-3-3 0:19:47, category: app.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-3 0:19:47, category: app.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-3 0:19:47, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-3 0:19:47, category: app.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-3 0:19:47, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-3 0:19:47, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-3 0:21:59, category: app.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-3 0:21:59, category: app.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-3 0:21:59, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-3 0:21:59, category: app.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-3 0:21:59, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-3 0:21:59, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\app.js
+[object Promise][object Promise][object Promise][object Promise][object Promise][object Promise]Date: 2024-3-3 0:19:47, category: webContext.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-3 0:19:47, category: webContext.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-3 0:19:47, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-3 0:19:47, category: webContext.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-3 0:19:47, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-3 0:19:47, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-3 0:21:59, category: webContext.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-3 0:21:59, category: webContext.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-3 0:21:59, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-3 0:21:59, category: webContext.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-3 0:21:59, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-3 0:21:59, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\webContext.js
 Date: [object Object], category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: [object Object], category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: [object Object], category: undefined, level: undefined, message: undefined, fileName: undefined
@@ -605,12 +605,12 @@ Date: [object Object], category: undefined, level: undefined, message: undefined
 Date: [object Object], category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: [object Object], category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: [object Object], category: undefined, level: undefined, message: undefined, fileName: undefined
-Date: 2024-3-3 0:31:18,INFO,app.js,[object Object],,D:\NodeJS\Lessons\HW4\app.js, category: undefined, level: undefined, message: undefined, fileName: undefined
-Date: 2024-3-3 0:31:18,WARN,app.js,[object Object],,D:\NodeJS\Lessons\HW4\app.js, category: undefined, level: undefined, message: undefined, fileName: undefined
-Date: 2024-3-3 0:31:18,ERROR,app.js,occur: My log,,D:\NodeJS\Lessons\HW4\app.js, category: undefined, level: undefined, message: undefined, fileName: undefined
-Date: 2024-3-3 0:31:18,DEBUG,app.js,Some debug data,,D:\NodeJS\Lessons\HW4\app.js, category: undefined, level: undefined, message: undefined, fileName: undefined
-Date: 2024-3-3 0:31:18,INFO,math.js,First operand: 2,,D:\NodeJS\Lessons\HW4\app.js, category: undefined, level: undefined, message: undefined, fileName: undefined
-Date: 2024-3-3 0:31:18,INFO,math.js,Second operand: 5,,D:\NodeJS\Lessons\HW4\app.js, category: undefined, level: undefined, message: undefined, fileName: undefined
+Date: 2024-3-3 0:31:18,INFO,webContext.js,[object Object],,D:\NodeJS\Lessons\HW4\webContext.js, category: undefined, level: undefined, message: undefined, fileName: undefined
+Date: 2024-3-3 0:31:18,WARN,webContext.js,[object Object],,D:\NodeJS\Lessons\HW4\webContext.js, category: undefined, level: undefined, message: undefined, fileName: undefined
+Date: 2024-3-3 0:31:18,ERROR,webContext.js,occur: My log,,D:\NodeJS\Lessons\HW4\webContext.js, category: undefined, level: undefined, message: undefined, fileName: undefined
+Date: 2024-3-3 0:31:18,DEBUG,webContext.js,Some debug data,,D:\NodeJS\Lessons\HW4\webContext.js, category: undefined, level: undefined, message: undefined, fileName: undefined
+Date: 2024-3-3 0:31:18,INFO,math.js,First operand: 2,,D:\NodeJS\Lessons\HW4\webContext.js, category: undefined, level: undefined, message: undefined, fileName: undefined
+Date: 2024-3-3 0:31:18,INFO,math.js,Second operand: 5,,D:\NodeJS\Lessons\HW4\webContext.js, category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: ,,,,,, category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: ,,,,,, category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: ,,,,,, category: undefined, level: undefined, message: undefined, fileName: undefined
@@ -635,18 +635,18 @@ Date: ,,,,,, category: undefined, level: undefined, message: undefined, fileName
 Date: ,,,,,, category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: ,,,,,, category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: ,,,,,, category: undefined, level: undefined, message: undefined, fileName: undefined
-Date: 2024-3-5 22:27:38,INFO,app.js,[object Object],,D:\NodeJS\Lessons\HW4\app.js, category: undefined, level: undefined, message: undefined, fileName: undefined
-Date: 2024-3-5 22:27:38,WARN,app.js,[object Object],,D:\NodeJS\Lessons\HW4\app.js, category: undefined, level: undefined, message: undefined, fileName: undefined
-Date: 2024-3-5 22:27:38,ERROR,app.js,occur: My log,,D:\NodeJS\Lessons\HW4\app.js, category: undefined, level: undefined, message: undefined, fileName: undefined
-Date: 2024-3-5 22:27:38,DEBUG,app.js,Some debug data,,D:\NodeJS\Lessons\HW4\app.js, category: undefined, level: undefined, message: undefined, fileName: undefined
-Date: 2024-3-5 22:27:38,INFO,math.js,First operand: 2,,D:\NodeJS\Lessons\HW4\app.js, category: undefined, level: undefined, message: undefined, fileName: undefined
-Date: 2024-3-5 22:27:38,INFO,math.js,Second operand: 5,,D:\NodeJS\Lessons\HW4\app.js, category: undefined, level: undefined, message: undefined, fileName: undefined
-Date: 2024-3-5 22:35:31,INFO,app.js,[object Object],,D:\NodeJS\Lessons\HW4\app.js, category: undefined, level: undefined, message: undefined, fileName: undefined
-Date: 2024-3-5 22:35:31,WARN,app.js,[object Object],,D:\NodeJS\Lessons\HW4\app.js, category: undefined, level: undefined, message: undefined, fileName: undefined
-Date: 2024-3-5 22:35:31,ERROR,app.js,occur: My log,,D:\NodeJS\Lessons\HW4\app.js, category: undefined, level: undefined, message: undefined, fileName: undefined
-Date: 2024-3-5 22:35:31,DEBUG,app.js,Some debug data,,D:\NodeJS\Lessons\HW4\app.js, category: undefined, level: undefined, message: undefined, fileName: undefined
-Date: 2024-3-5 22:35:31,INFO,math.js,First operand: 2,,D:\NodeJS\Lessons\HW4\app.js, category: undefined, level: undefined, message: undefined, fileName: undefined
-Date: 2024-3-5 22:35:31,INFO,math.js,Second operand: 5,,D:\NodeJS\Lessons\HW4\app.js, category: undefined, level: undefined, message: undefined, fileName: undefined
+Date: 2024-3-5 22:27:38,INFO,webContext.js,[object Object],,D:\NodeJS\Lessons\HW4\webContext.js, category: undefined, level: undefined, message: undefined, fileName: undefined
+Date: 2024-3-5 22:27:38,WARN,webContext.js,[object Object],,D:\NodeJS\Lessons\HW4\webContext.js, category: undefined, level: undefined, message: undefined, fileName: undefined
+Date: 2024-3-5 22:27:38,ERROR,webContext.js,occur: My log,,D:\NodeJS\Lessons\HW4\webContext.js, category: undefined, level: undefined, message: undefined, fileName: undefined
+Date: 2024-3-5 22:27:38,DEBUG,webContext.js,Some debug data,,D:\NodeJS\Lessons\HW4\webContext.js, category: undefined, level: undefined, message: undefined, fileName: undefined
+Date: 2024-3-5 22:27:38,INFO,math.js,First operand: 2,,D:\NodeJS\Lessons\HW4\webContext.js, category: undefined, level: undefined, message: undefined, fileName: undefined
+Date: 2024-3-5 22:27:38,INFO,math.js,Second operand: 5,,D:\NodeJS\Lessons\HW4\webContext.js, category: undefined, level: undefined, message: undefined, fileName: undefined
+Date: 2024-3-5 22:35:31,INFO,webContext.js,[object Object],,D:\NodeJS\Lessons\HW4\webContext.js, category: undefined, level: undefined, message: undefined, fileName: undefined
+Date: 2024-3-5 22:35:31,WARN,webContext.js,[object Object],,D:\NodeJS\Lessons\HW4\webContext.js, category: undefined, level: undefined, message: undefined, fileName: undefined
+Date: 2024-3-5 22:35:31,ERROR,webContext.js,occur: My log,,D:\NodeJS\Lessons\HW4\webContext.js, category: undefined, level: undefined, message: undefined, fileName: undefined
+Date: 2024-3-5 22:35:31,DEBUG,webContext.js,Some debug data,,D:\NodeJS\Lessons\HW4\webContext.js, category: undefined, level: undefined, message: undefined, fileName: undefined
+Date: 2024-3-5 22:35:31,INFO,math.js,First operand: 2,,D:\NodeJS\Lessons\HW4\webContext.js, category: undefined, level: undefined, message: undefined, fileName: undefined
+Date: 2024-3-5 22:35:31,INFO,math.js,Second operand: 5,,D:\NodeJS\Lessons\HW4\webContext.js, category: undefined, level: undefined, message: undefined, fileName: undefined
 [object Object][object Object][object Object][object Object][object Object][object Object][object Object][object Object][object Object][object Object][object Object][object Object][object Object][object Object][object Object][object Object][object Object][object Object]Date: ,,,,,, category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: ,,,,,, category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: ,,,,,, category: undefined, level: undefined, message: undefined, fileName: undefined
@@ -659,142 +659,142 @@ Date: ,,,,,, category: undefined, level: undefined, message: undefined, fileName
 Date: ,,,,,, category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: ,,,,,, category: undefined, level: undefined, message: undefined, fileName: undefined
 Date: ,,,,,, category: undefined, level: undefined, message: undefined, fileName: undefined
-Date: 2024-3-5 23:34:2, category: app.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-5 23:34:2, category: app.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-5 23:34:2, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-5 23:34:2, category: app.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-5 23:34:2, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-5 23:34:2, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-5 23:41:5, category: app.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-5 23:41:5, category: app.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-5 23:41:5, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-5 23:41:5, category: app.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-5 23:41:5, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-5 23:41:5, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\app.js
-{"date":"2024-3-5 23:41:33","level":"INFO","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-5 23:41:33","level":"WARN","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-5 23:41:33","level":"ERROR","category":"app.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-5 23:41:33","level":"DEBUG","category":"app.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-5 23:41:33","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-5 23:41:33","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-2024-3-5 23:45:43,INFO,app.js,[object Object],D:\NodeJS\Lessons\HW4\app.js
-2024-3-5 23:45:43,WARN,app.js,[object Object],D:\NodeJS\Lessons\HW4\app.js
-2024-3-5 23:45:43,ERROR,app.js,occur: My log,D:\NodeJS\Lessons\HW4\app.js
-2024-3-5 23:45:43,DEBUG,app.js,Some debug data,D:\NodeJS\Lessons\HW4\app.js
-2024-3-5 23:45:43,INFO,math.js,First operand: 2,D:\NodeJS\Lessons\HW4\app.js
-2024-3-5 23:45:43,INFO,math.js,Second operand: 5,D:\NodeJS\Lessons\HW4\app.js
-2024-3-6 0:4:46,INFO,app.js,[object Object],D:\NodeJS\Lessons\HW4\app.js
-2024-3-6 0:4:46,DEBUG,app.js,Some debug data,D:\NodeJS\Lessons\HW4\app.js
-2024-3-6 0:4:46,INFO,math.js,First operand: 2,D:\NodeJS\Lessons\HW4\app.js
-2024-3-6 0:4:46,INFO,math.js,Second operand: 5,D:\NodeJS\Lessons\HW4\app.js
-2024-3-6 0:4:46,ERROR,app.js,occur: My log,D:\NodeJS\Lessons\HW4\app.js
-2024-3-6 0:4:46,WARN,app.js,[object Object],D:\NodeJS\Lessons\HW4\app.js
-{"date":"2024-3-6 0:5:13","level":"INFO","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-6 0:5:13","level":"WARN","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-6 0:5:13","level":"ERROR","category":"app.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-6 0:5:13","level":"DEBUG","category":"app.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-6 0:5:13","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-6 0:5:13","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-Date: 2024-3-6 0:5:31, category: app.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:5:31, category: app.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:5:31, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:5:31, category: app.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:5:31, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:5:31, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:16:56, category: app.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:16:56, category: app.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:16:56, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:16:56, category: app.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:16:56, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:16:56, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:30:57, category: app.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:30:57, category: app.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:30:57, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:30:57, category: app.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:30:57, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:30:57, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:30:57, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:31:45, category: app.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:31:45, category: app.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:31:45, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:31:45, category: app.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:31:45, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:31:45, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:31:45, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:31:47, category: app.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:31:47, category: app.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:31:47, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:31:47, category: app.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:31:47, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:31:47, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:31:47, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:38:26, category: app.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:38:26, category: app.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:38:26, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:38:26, category: app.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:38:26, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:38:26, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:38:26, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:41:15, category: app.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:41:17, category: app.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:41:18, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:41:18, category: app.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:41:19, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:41:19, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:41:18, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:47:45, category: app.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:47:45, category: app.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:47:45, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:47:45, category: app.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:47:45, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:47:45, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:47:45, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:49:7, category: app.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:49:7, category: app.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:49:7, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:49:7, category: app.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:49:7, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:49:7, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:49:7, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:49:49, category: app.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:49:49, category: app.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:49:49, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:49:49, category: app.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:49:49, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:49:49, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:51:6, category: app.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:51:6, category: app.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:51:6, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:51:6, category: app.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:51:6, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:51:6, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:54:36, category: app.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:54:46, category: app.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:54:49, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:54:52, category: app.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:54:59, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 0:55:2, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 1:0:8, category: app.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 1:0:8, category: app.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 1:0:8, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 1:0:8, category: app.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 1:0:8, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 1:0:8, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 1:1:13, category: app.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 1:1:13, category: app.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 1:1:13, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 1:1:13, category: app.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 1:1:13, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 1:1:13, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 1:6:44, category: app.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 1:6:44, category: app.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 1:6:44, category: app.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 1:6:44, category: app.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 1:6:44, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\app.js
-Date: 2024-3-6 1:6:44, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\app.js
-{"date":"2024-3-6 8:53:23","level":"INFO","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-6 8:53:23","level":"WARN","category":"app.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-6 8:53:23","level":"ERROR","category":"app.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-6 8:53:23","level":"DEBUG","category":"app.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-6 8:53:23","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
-{"date":"2024-3-6 8:53:23","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\app.js"}
+Date: 2024-3-5 23:34:2, category: webContext.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-5 23:34:2, category: webContext.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-5 23:34:2, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-5 23:34:2, category: webContext.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-5 23:34:2, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-5 23:34:2, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-5 23:41:5, category: webContext.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-5 23:41:5, category: webContext.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-5 23:41:5, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-5 23:41:5, category: webContext.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-5 23:41:5, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-5 23:41:5, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+{"date":"2024-3-5 23:41:33","level":"INFO","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-5 23:41:33","level":"WARN","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-5 23:41:33","level":"ERROR","category":"webContext.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-5 23:41:33","level":"DEBUG","category":"webContext.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-5 23:41:33","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-5 23:41:33","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+2024-3-5 23:45:43,INFO,webContext.js,[object Object],D:\NodeJS\Lessons\HW4\webContext.js
+2024-3-5 23:45:43,WARN,webContext.js,[object Object],D:\NodeJS\Lessons\HW4\webContext.js
+2024-3-5 23:45:43,ERROR,webContext.js,occur: My log,D:\NodeJS\Lessons\HW4\webContext.js
+2024-3-5 23:45:43,DEBUG,webContext.js,Some debug data,D:\NodeJS\Lessons\HW4\webContext.js
+2024-3-5 23:45:43,INFO,math.js,First operand: 2,D:\NodeJS\Lessons\HW4\webContext.js
+2024-3-5 23:45:43,INFO,math.js,Second operand: 5,D:\NodeJS\Lessons\HW4\webContext.js
+2024-3-6 0:4:46,INFO,webContext.js,[object Object],D:\NodeJS\Lessons\HW4\webContext.js
+2024-3-6 0:4:46,DEBUG,webContext.js,Some debug data,D:\NodeJS\Lessons\HW4\webContext.js
+2024-3-6 0:4:46,INFO,math.js,First operand: 2,D:\NodeJS\Lessons\HW4\webContext.js
+2024-3-6 0:4:46,INFO,math.js,Second operand: 5,D:\NodeJS\Lessons\HW4\webContext.js
+2024-3-6 0:4:46,ERROR,webContext.js,occur: My log,D:\NodeJS\Lessons\HW4\webContext.js
+2024-3-6 0:4:46,WARN,webContext.js,[object Object],D:\NodeJS\Lessons\HW4\webContext.js
+{"date":"2024-3-6 0:5:13","level":"INFO","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-6 0:5:13","level":"WARN","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-6 0:5:13","level":"ERROR","category":"webContext.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-6 0:5:13","level":"DEBUG","category":"webContext.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-6 0:5:13","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-6 0:5:13","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+Date: 2024-3-6 0:5:31, category: webContext.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:5:31, category: webContext.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:5:31, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:5:31, category: webContext.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:5:31, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:5:31, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:16:56, category: webContext.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:16:56, category: webContext.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:16:56, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:16:56, category: webContext.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:16:56, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:16:56, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:30:57, category: webContext.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:30:57, category: webContext.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:30:57, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:30:57, category: webContext.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:30:57, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:30:57, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:30:57, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:31:45, category: webContext.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:31:45, category: webContext.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:31:45, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:31:45, category: webContext.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:31:45, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:31:45, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:31:45, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:31:47, category: webContext.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:31:47, category: webContext.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:31:47, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:31:47, category: webContext.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:31:47, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:31:47, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:31:47, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:38:26, category: webContext.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:38:26, category: webContext.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:38:26, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:38:26, category: webContext.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:38:26, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:38:26, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:38:26, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:41:15, category: webContext.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:41:17, category: webContext.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:41:18, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:41:18, category: webContext.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:41:19, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:41:19, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:41:18, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:47:45, category: webContext.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:47:45, category: webContext.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:47:45, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:47:45, category: webContext.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:47:45, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:47:45, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:47:45, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:49:7, category: webContext.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:49:7, category: webContext.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:49:7, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:49:7, category: webContext.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:49:7, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:49:7, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:49:7, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:49:49, category: webContext.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:49:49, category: webContext.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:49:49, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:49:49, category: webContext.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:49:49, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:49:49, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:51:6, category: webContext.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:51:6, category: webContext.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:51:6, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:51:6, category: webContext.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:51:6, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:51:6, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:54:36, category: webContext.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:54:46, category: webContext.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:54:49, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:54:52, category: webContext.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:54:59, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 0:55:2, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 1:0:8, category: webContext.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 1:0:8, category: webContext.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 1:0:8, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 1:0:8, category: webContext.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 1:0:8, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 1:0:8, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 1:1:13, category: webContext.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 1:1:13, category: webContext.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 1:1:13, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 1:1:13, category: webContext.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 1:1:13, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 1:1:13, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 1:6:44, category: webContext.js, level: INFO, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 1:6:44, category: webContext.js, level: WARN, message: [object Object], fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 1:6:44, category: webContext.js, level: ERROR, message: occur: My log, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 1:6:44, category: webContext.js, level: DEBUG, message: Some debug data, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 1:6:44, category: math.js, level: INFO, message: First operand: 2, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+Date: 2024-3-6 1:6:44, category: math.js, level: INFO, message: Second operand: 5, fileName: D:\NodeJS\Lessons\HW4\webContext.js
+{"date":"2024-3-6 8:53:23","level":"INFO","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-6 8:53:23","level":"WARN","category":"webContext.js","message":"[object Object]","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-6 8:53:23","level":"ERROR","category":"webContext.js","message":"occur: My log","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-6 8:53:23","level":"DEBUG","category":"webContext.js","message":"Some debug data","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-6 8:53:23","level":"INFO","category":"math.js","message":"First operand: 2","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}
+{"date":"2024-3-6 8:53:23","level":"INFO","category":"math.js","message":"Second operand: 5","fileName":"D:\\NodeJS\\Lessons\\HW4\\webContext.js"}

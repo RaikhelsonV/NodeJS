@@ -1,28 +1,28 @@
-Date: 24.02.2024, 22:02:47, category: app.js, level: ERROR, message: "ERROR occur: My log"
-Date: 24.02.2024, 22:03:08, category: app.js, level: ERROR, message: "ERROR occur: My log"
-Date: 24.02.2024, 22:04:10, category: app.js, level: ERROR, message: "ERROR occur: My log"
-Date: 24.02.2024, 22:05:42, category: app.js, level: ERROR, message: "ERROR occur: My log"
-Date: 24.02.2024, 22:13:49, category: app.js, level: ERROR, message: "ERROR occur: My log"
-{"date":"2024-3-1 14:26:35","level":"ERROR","category":"app.js","message":"ERROR occur: My log"}
-2024-3-1 14:32:6,ERROR,app.js,ERROR occur: My log
-2024-3-1 14:44:23,ERROR,app.js,ERROR occur: My log
-2024-3-1 14:46:18,ERROR,app.js,ERROR occur: My log
-2024-3-1 14:47:0,ERROR,app.js,ERROR occur: My log
-{"date":"2024-3-1 17:8:23","level":"ERROR","category":"app.js","message":"ERROR occur: My log"}{"date":"2024-3-1 17:14:0","level":"ERROR","category":"app.js","message":"ERROR occur: My log\n"}{"date":"2024-3-1 17:18:51","level":"ERROR","category":"app.js","message":"ERROR occur: My log"}
-2024-3-1 17:19:7,ERROR,app.js,ERROR occur: My log
-Date: 2024-3-1 17:19:21, category: app.js, level: ERROR, message: "ERROR occur: My log"Date: 2024-3-1 17:20:35, category: app.js, level: ERROR, message: "ERROR occur: My log"
-Date: 2024-3-1 17:28:36, category: app.js, level: ERROR, message: "ERROR occur: My log"
-2024-3-1 17:29:15,ERROR,app.js,ERROR occur: My log
-2024-3-1 17:30:55,ERROR,app.js,ERROR occur: My log
-2024-3-1 17:32:34,ERROR,app.js,ERROR occur: My log
-2024-3-1 17:35:2,ERROR,app.js,ERROR occur: My log
-2024-3-1 17:37:19,ERROR,app.js,ERROR occur: My log
-2024-3-1 17:38:4,ERROR,app.js,ERROR occur: My log
-2024-3-1 17:45:13,ERROR,app.js,ERROR occur: My log
-2024-3-1 17:45:49,ERROR,app.js,ERROR occur: My log
-2024-3-1 17:46:36,ERROR,app.js,ERROR occur: My log
-2024-3-1 18:7:52,ERROR,app.js,occur: My log
-{"date":"2024-3-1 18:15:0","level":"ERROR","category":"app.js","message":"occur: My log"}
-{"date":"2024-3-1 18:18:25","level":"ERROR","category":"app.js","message":"occur: My log"}
-2024-3-1 18:19:13,ERROR,app.js,occur: My log
-Date: 2024-3-1 18:19:31, category: app.js, level: ERROR, message: "occur: My log"
+Date: 24.02.2024, 22:02:47, category: webContext.js, level: ERROR, message: "ERROR occur: My log"
+Date: 24.02.2024, 22:03:08, category: webContext.js, level: ERROR, message: "ERROR occur: My log"
+Date: 24.02.2024, 22:04:10, category: webContext.js, level: ERROR, message: "ERROR occur: My log"
+Date: 24.02.2024, 22:05:42, category: webContext.js, level: ERROR, message: "ERROR occur: My log"
+Date: 24.02.2024, 22:13:49, category: webContext.js, level: ERROR, message: "ERROR occur: My log"
+{"date":"2024-3-1 14:26:35","level":"ERROR","category":"webContext.js","message":"ERROR occur: My log"}
+2024-3-1 14:32:6,ERROR,webContext.js,ERROR occur: My log
+2024-3-1 14:44:23,ERROR,webContext.js,ERROR occur: My log
+2024-3-1 14:46:18,ERROR,webContext.js,ERROR occur: My log
+2024-3-1 14:47:0,ERROR,webContext.js,ERROR occur: My log
+{"date":"2024-3-1 17:8:23","level":"ERROR","category":"webContext.js","message":"ERROR occur: My log"}{"date":"2024-3-1 17:14:0","level":"ERROR","category":"webContext.js","message":"ERROR occur: My log\n"}{"date":"2024-3-1 17:18:51","level":"ERROR","category":"webContext.js","message":"ERROR occur: My log"}
+2024-3-1 17:19:7,ERROR,webContext.js,ERROR occur: My log
+Date: 2024-3-1 17:19:21, category: webContext.js, level: ERROR, message: "ERROR occur: My log"Date: 2024-3-1 17:20:35, category: webContext.js, level: ERROR, message: "ERROR occur: My log"
+Date: 2024-3-1 17:28:36, category: webContext.js, level: ERROR, message: "ERROR occur: My log"
+2024-3-1 17:29:15,ERROR,webContext.js,ERROR occur: My log
+2024-3-1 17:30:55,ERROR,webContext.js,ERROR occur: My log
+2024-3-1 17:32:34,ERROR,webContext.js,ERROR occur: My log
+2024-3-1 17:35:2,ERROR,webContext.js,ERROR occur: My log
+2024-3-1 17:37:19,ERROR,webContext.js,ERROR occur: My log
+2024-3-1 17:38:4,ERROR,webContext.js,ERROR occur: My log
+2024-3-1 17:45:13,ERROR,webContext.js,ERROR occur: My log
+2024-3-1 17:45:49,ERROR,webContext.js,ERROR occur: My log
+2024-3-1 17:46:36,ERROR,webContext.js,ERROR occur: My log
+2024-3-1 18:7:52,ERROR,webContext.js,occur: My log
+{"date":"2024-3-1 18:15:0","level":"ERROR","category":"webContext.js","message":"occur: My log"}
+{"date":"2024-3-1 18:18:25","level":"ERROR","category":"webContext.js","message":"occur: My log"}
+2024-3-1 18:19:13,ERROR,webContext.js,occur: My log
+Date: 2024-3-1 18:19:31, category: webContext.js, level: ERROR, message: "occur: My log"

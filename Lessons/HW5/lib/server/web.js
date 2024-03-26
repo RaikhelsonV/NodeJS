@@ -7,6 +7,7 @@ const httpServer = http.createServer((req, res) => {
     if (req.method === 'GET' && req.url === '/logs') {
         res.writeHead(200, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ logCache }));
+        res.end();
     } else {
         res.statusCode = 404;
         res.end();
@@ -16,3 +17,24 @@ const httpServer = http.createServer((req, res) => {
 httpServer.listen(config.httpPort, () => {
     console.log('Server started');
 });
+
+async function addToLogCache(
+    date,
+    level,
+    category,
+    message,
+    formatter,
+    fileName
+) {
+    const logMessage = await formatMessage(
+        date,
+        level,
+        category,
+        message,
+        formatter,
+        fileName
+    );
+    logCache.push(logMessage);
+}
+
+export { addToLogCache };
