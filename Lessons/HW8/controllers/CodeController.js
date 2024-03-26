@@ -8,32 +8,18 @@ export default class CodeController extends Router {
         super();
         this.urlService = new UrlService();
         this.redisClient = redisClient;
+        this.rateLimit = new RateLimit(this.redisClient);
         this.init();
     }
 
     init = () => {
         this.use(authMiddleware);
-        const rateLimit = new RateLimit(this.redisClient);
-        this.use(rateLimit);
-
+        this.use(this.rateLimitMiddleware)
         this.get('/:code', async (req, res) => {
             const code = req.params.code;
             const urlData = this.urlService.getUrlInfo(code);
 
             console.log('url' + JSON.stringify(urlData));
-            console.log('ID' + req.user.userId, 'code' + req.url);
-
-            const userId = req.user.userId;
-            const urlCode = req.url;
-            const isRateLimited = await this.rateLimit.checkRateLimit(
-                userId,
-                urlCode
-            );
-
-            if (!isRateLimited) {
-                res.status(429).send('Rate Limit Exceeded');
-                return;
-            }
 
             if (urlData) {
                 this.urlService.addVisit(code);
@@ -42,5 +28,22 @@ export default class CodeController extends Router {
                 res.status(404).send('Not Found');
             }
         });
+    };
+
+    rateLimitMiddleware = async (req, res, next) => {
+        const userId = req.user.userId;
+        const urlCode = req.url;
+        console.log('ID' + req.user.userId, 'code' + req.url);
+        const isRateLimited = await this.rateLimit.checkRateLimit(
+            userId,
+            urlCode
+        );
+
+        if (!isRateLimited) {
+            res.status(429).send('Rate Limit Exceeded');
+            return;
+        }
+
+        next();
     };
 }
