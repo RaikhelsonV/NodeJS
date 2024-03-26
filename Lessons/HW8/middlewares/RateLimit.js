@@ -9,16 +9,9 @@ export default class RateLimit {
         try {
             const userRequestsKey = `rateLimitUserId:${userId}`;
             const urlRequestsKey = `rateLimitCodeUrl:${urlCode}`;
-            const currentTime = Math.floor(Date.now() / 1000);
 
-            await this.redisClient.rPush(
-                userRequestsKey,
-                currentTime.toString()
-            );
-            await this.redisClient.rPush(
-                urlRequestsKey,
-                currentTime.toString()
-            );
+            await this.redisClient.incr(userRequestsKey);
+            await this.redisClient.incr(urlRequestsKey);
 
             await this.redisClient.expire(
                 userRequestsKey,
@@ -29,8 +22,12 @@ export default class RateLimit {
                 config.rateLimits.url.duration
             );
 
-            const userCount = await this.redisClient.lLen(userRequestsKey);
-            const urlCount = await this.redisClient.lLen(urlRequestsKey);
+            const userCount = parseInt(
+                await this.redisClient.get(userRequestsKey)
+            );
+            const urlCount = parseInt(
+                await this.redisClient.get(urlRequestsKey)
+            );
             console.log('userCount:', userCount, ' urlCount: ', urlCount);
 
             if (
