@@ -37,12 +37,12 @@ export default class RateLimit {
                 userCount >= config.rateLimits.user.limit ||
                 urlCount >= config.rateLimits.url.limit
             ) {
-                return 429;
+                return false;
             }
-            return 200;
+            return true;
         } catch (error) {
             console.error('Error checking rate limit:', error);
-            return 500;
+            return false;
         }
     }
 }

@@ -7,13 +7,15 @@ export default class CodeController extends Router {
     constructor(redisClient) {
         super();
         this.urlService = new UrlService();
-        this.use(authMiddleware);
         this.redisClient = redisClient;
-        this.rateLimit = new RateLimit(this.redisClient);
         this.init();
     }
 
     init = () => {
+        this.use(authMiddleware);
+        const rateLimit = new RateLimit(this.redisClient);
+        this.use(rateLimit);
+
         this.get('/:code', async (req, res) => {
             const code = req.params.code;
             const urlData = this.urlService.getUrlInfo(code);
@@ -23,16 +25,13 @@ export default class CodeController extends Router {
 
             const userId = req.user.userId;
             const urlCode = req.url;
-            const rateLimitResult = await this.rateLimit.checkRateLimit(
+            const isRateLimited = await this.rateLimit.checkRateLimit(
                 userId,
                 urlCode
             );
 
-            if (rateLimitResult === 429) {
+            if (!isRateLimited) {
                 res.status(429).send('Rate Limit Exceeded');
-                return;
-            } else if (rateLimitResult === 500) {
-                res.status(500).send('Internal Server Error');
                 return;
             }
 
