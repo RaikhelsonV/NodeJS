@@ -7,21 +7,21 @@ export default class UserService {
         this.userRepository = new UserRepository();
     }
 
-    create(name, password) {
+    async create(name, password) {
         const user = new UserModel(generatedUserId('user'), name, password);
-        this.userRepository.save(user);
-        console.log('aaa' + JSON.stringify(user));
+        await this.userRepository.save(user);
         return user;
     }
 
-    getUsersPublicData() {
-        const users = this.userRepository.getAll();
+    async getUsersPublicData() {
+        const users = await this.userRepository.getAll();
         const result = [];
         for (const user of users) {
+            console.log(user.user_id, user.name, user.created_at,)
             result.push({
-                id: user.userId,
+                id: user.user_id,
                 name: user.name,
-                created_time: user.created_time,
+                created_time: user.created_at,
             });
         }
         for (const [index, user] of result.entries()) {

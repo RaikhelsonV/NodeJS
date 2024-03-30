@@ -2,10 +2,11 @@ import path from 'path';
 import fs from 'fs';
 import pkg from 'pg';
 
-const { Client } = pkg;
+const {Pool} = pkg;
+
 const __dirname = path.resolve();
 
-const client = new Client({
+const pool = new Pool({
     user: 'postgres',
     host: '127.0.0.1',
     database: 'hillel',
@@ -13,22 +14,21 @@ const client = new Client({
     port: 5432,
 });
 
-async function connectAndQuery() {
-    try {
-        await client.connect();
-        console.log('Connected to the database');
 
+async function createTable() {
+    const client = await pool.connect();
+    try {
         const sqlFilePath = path.join(__dirname, 'createTable.sql');
         const sql = fs.readFileSync(sqlFilePath, 'utf-8');
-
         const queryResult = await client.query(sql);
         console.log('Tables created successfully');
-    } catch (error) {
-        console.error('Error during database connection:', error);
+    } catch (err) {
+        console.error('Error creating table:', err);
     } finally {
-        // await client.end();
-        // console.log('Disconnected from the database');
+        client.release();
     }
 }
 
-export { connectAndQuery, client };
+createTable();
+
+export {pool};

@@ -2,11 +2,12 @@ import UserRepository from '../repository/userRepository.js';
 import express from 'express';
 
 export const jsonParser = express.json();
-export const urlEncodedParser = express.urlencoded({ extended: true });
-export default (req, res, next) => {
+export const urlEncodedParser = express.urlencoded({extended: true});
+export default async (req, res, next) => {
     const auth = req.header('Authorization');
     console.log('AUTH' + auth);
     if (auth?.startsWith('Basic')) {
+        console.log('Basic')
         const encodedCredentials = auth.split(' ')[1];
 
         const decodedCredentials = Buffer.from(
@@ -19,13 +20,13 @@ export default (req, res, next) => {
         console.log('Username:', username);
         console.log('Password:', password);
 
-        const user = new UserRepository().getUserByName(username);
+        const user = await new UserRepository().getUserByName(username);
 
         if (user && user.password === password) {
-            req.user = { ...user, id: user.id };
-            console.log('REQ USER AUTOR' + req.user);
+            req.user = {...user, id: user.id};
+            console.log('REQ USER AUTOR' + JSON.stringify(req.user));
 
-            req.session.user = { ...user, id: user.id };
+            req.session.user = {...user, id: user.id};
             next();
             return;
         }

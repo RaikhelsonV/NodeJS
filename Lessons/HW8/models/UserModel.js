@@ -2,6 +2,7 @@ export default class UserModel {
     userId;
     name;
     password;
+    created_time;
 
     constructor(userId, name, password) {
         this.userId = userId;
