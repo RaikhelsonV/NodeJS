@@ -3,8 +3,8 @@ import fs from 'fs';
 import pkg from 'pg';
 import dotenv from "dotenv";
 
+dotenv.config();
 const {Pool} = pkg;
-
 const __dirname = path.resolve();
 
 const pool = new Pool({
@@ -14,7 +14,6 @@ const pool = new Pool({
     password: process.env.DB_PASSWORD,
     port: process.env.DB_PORT,
 });
-
 
 async function createTable() {
     const client = await pool.connect();
