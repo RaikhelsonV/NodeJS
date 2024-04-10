@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 50%;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #ccc;
+        }
+
+        form {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 30%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+
+        input[type='text'],
+        input[type='password'],
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #ccc;
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(94, 96, 94);
+        }
+    </style>
+</head>
+<body>
+<h2>URL!</h2>
+
+<form action="/url/addUrl" method="POST">
+    <input
+            type="text"
+            name="name"
+            placeholder="Enter the name"
+            required
+    />
+    <input
+            type="text"
+            name="url"
+            placeholder="Enter the URL"
+            required
+    />
+
+    <button type="submit">Create URL</button>
+</form>
+
+<div style="margin-top: 20px"></div>
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>URL</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% userUrls.forEach(url => { %>
+        <tr>
+            <td><%= url.name %></td>
+            <td><%= url.url %></td>
+        </tr>
+    <% }); %>
+    </tbody>
+</table>
+</body>
+</html>
