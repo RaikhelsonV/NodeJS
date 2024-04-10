@@ -1,4 +1,4 @@
-import { Router } from 'express';
+import {Router} from 'express';
 import UrlService from '../services/urlService.js';
 import authMiddleware from '../middlewares/authMiddleware.js';
 import RateLimit from '../middlewares/RateLimit.js';
@@ -17,12 +17,12 @@ export default class CodeController extends Router {
         this.use(this.rateLimitMiddleware)
         this.get('/:code', async (req, res) => {
             const code = req.params.code;
-            const urlData = this.urlService.getUrlInfo(code);
+            const urlData = await this.urlService.getUrlInfo(code);
 
             console.log('url' + JSON.stringify(urlData));
 
             if (urlData) {
-                this.urlService.addVisit(code);
+                await this.urlService.addVisit(code);
                 res.redirect(302, urlData.url);
             } else {
                 res.status(404).send('Not Found');
@@ -31,15 +31,18 @@ export default class CodeController extends Router {
     };
 
     rateLimitMiddleware = async (req, res, next) => {
-        const userId = req.user.userId;
+        const userId = req.user.user_id;
         const urlCode = req.url;
-        console.log('ID' + req.user.userId, 'code' + req.url);
-        const isRateLimited = await this.rateLimit.checkRateLimit(
-            userId,
-            urlCode
-        );
+        console.log('ID' + req.user.user_id, 'code' + req.url);
 
-        if (!isRateLimited) {
+        const keys = {
+            userRequestsKey: `rateLimitUserId:${userId}`,
+            urlRequestsKey: `rateLimitCodeUrl:${urlCode}`
+        };
+
+        const isUserRateLimited = await this.rateLimit.checkRateLimit(keys, "user");
+        const isUrlRateLimited = await this.rateLimit.checkRateLimit(keys, "url");
+        if (!isUserRateLimited || !isUrlRateLimited) {
             res.status(429).send('Rate Limit Exceeded');
             return;
         }
