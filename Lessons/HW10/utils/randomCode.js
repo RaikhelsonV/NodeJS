@@ -17,7 +17,6 @@ function generateHash(length) {
 function generatedUserId(sequenceNumber) {
     const sequence = store[sequenceNumber] || 0;
     store[sequenceNumber] = sequence + 1;
-    console.log("generatedUserId "+ sequence)
     return sequence + 1;
 }
 

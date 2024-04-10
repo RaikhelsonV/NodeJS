@@ -1,5 +1,9 @@
 import knexClient from "../knex/knexClient.js";
 import UrlModelObj from "../knex/objection/UrlModelObj.js";
+import appLogger from "appLogger";
+
+const log = appLogger.getLogger('UrlRepository.js');
+
 
 export default class UrlRepository {
     async add(url) {
@@ -14,9 +18,9 @@ export default class UrlRepository {
                 user_id: url.user.user_id,
             });
 
-            console.log("Inserted url:", insertedURL);
+            log.debug("Inserted url:", insertedURL);
         } catch (error) {
-            console.error('Error saving url:', error);
+            log.error('Error saving url:', error);
             throw new Error('Failed to save url');
         }
     }
@@ -27,7 +31,7 @@ export default class UrlRepository {
                 .where('code', code)
                 .increment('visits', 1);
         } catch (error) {
-            console.error('Error adding visit:', error);
+            log.error('Error adding visit:', error);
             throw new Error('Failed to add visit');
         }
     }
@@ -35,10 +39,10 @@ export default class UrlRepository {
     async get(code) {
         try {
             const url = await UrlModelObj.query().findOne('code', code);
-            console.log('DB BY code' + JSON.stringify(url));
+            log.debug('DB BY code' + JSON.stringify(url));
             return url;
         } catch (error) {
-            console.error(`Error getting url by code: ${code}`, error);
+            log.error(`Error getting url by code: ${code}`, error);
             throw new Error('Failed to get url by code');
         }
     }
@@ -46,10 +50,10 @@ export default class UrlRepository {
     async getUrlByUser(user) {
         try {
             const urls = await UrlModelObj.query().where('user_id', user.user_id);
-            console.log('DB All url by user' + JSON.stringify(urls));
+            log.debug('DB All url by user' + JSON.stringify(urls));
             return urls;
         } catch (error) {
-            console.error('Error getting URLs by user:', error);
+            log.error('Error getting URLs by user:', error);
             throw new Error('Failed to get URLs by user');
         }
     }

@@ -7,7 +7,7 @@ class UrlModelObj extends Model {
     }
 
     static get idColumn() {
-        return 'id'; // Assuming the identifier column is 'id'
+        return 'id';
     }
 
     static get jsonSchema() {

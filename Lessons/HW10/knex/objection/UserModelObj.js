@@ -7,19 +7,19 @@ class UserModelObj extends Model {
     }
 
     static get idColumn() {
-        return 'id'; // Assuming the identifier column is 'id'
+        return 'id';
     }
 
     static get jsonSchema() {
         return {
             type: 'object',
-            required: ['user_id', 'name', 'password'], // Assuming these are required fields
+            required: ['user_id', 'name', 'password'],
             properties: {
                 id: {type: 'integer'},
-                user_id: {type: 'integer'}, // Assuming this is the user identifier
+                user_id: {type: 'integer'},
                 name: {type: 'string'},
                 password: {type: 'string'},
-                created_at: {type: 'string', format: 'date-time'} // Assuming created_at is a timestamp
+                created_at: {type: 'string', format: 'date-time'}
             }
         };
     }

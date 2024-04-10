@@ -4,6 +4,9 @@ import UserService from "../services/UserService.js";
 import UserRepository from '../repository/UserRepository.js';
 import {jsonParser, urlEncodedParser} from '../middlewares/authMiddleware.js';
 import authMiddleware from '../middlewares/authMiddleware.js';
+import appLogger from "appLogger";
+
+const log = appLogger.getLogger('UrlController.js');
 
 export default class UrlController extends Router {
     constructor() {
@@ -22,10 +25,8 @@ export default class UrlController extends Router {
         });
 
         this.post('/addUrl', urlEncodedParser, async (req, res) => {
-            console.log("get user by name")
             const user = await this.userRepository.getUserByName(req.user.name);
-            console.log('url controller + got user: '+JSON.stringify(user));
-            console.log("req.user = user;" + JSON.stringify(req.user));
+            log.info(JSON.stringify(user));
             req.user = user;
             const code = await this.urlService.addUrl(req.body, req.user);
             res.redirect('/url');

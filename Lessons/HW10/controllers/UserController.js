@@ -1,6 +1,9 @@
 import UserService from '../services/userService.js';
 import {Router} from 'express';
 import {jsonParser, urlEncodedParser} from '../middlewares/authMiddleware.js';
+import appLogger from "appLogger";
+
+const log = appLogger.getLogger('UserController.js');
 
 export default class UserController extends Router {
     constructor() {
@@ -13,7 +16,7 @@ export default class UserController extends Router {
         this.get('/', async (req, res) => {
             const users = await this.userService.getUsersPublicData();
             users.forEach(user => {
-                console.log(user);
+                log.info(JSON.stringify(user));
             });
             res.render('users.ejs', {users});
         });
@@ -25,7 +28,7 @@ export default class UserController extends Router {
 
         this.post('/create', jsonParser, async (req, res) => {
             const {name, password} = req.body;
-            console.log(name, password);
+            log.info(name, password);
             const newUser = await this.userService.create(name, password);
             res.json(newUser);
         });
@@ -33,7 +36,7 @@ export default class UserController extends Router {
         this.post('/createUser', urlEncodedParser, async (req, res) => {
             const {name, password} = req.body;
             const newUser = await this.userService.create(name, password);
-            console.log(JSON.stringify(newUser));
+            log.info(JSON.stringify(newUser));
             req.session.user = {name: name, password: password};
             res.redirect('/user');
         });

@@ -1,4 +1,7 @@
 import config from '../config.js';
+import appLogger from "appLogger";
+
+const log = appLogger.getLogger('RateLimit.js');
 
 export default class RateLimit {
 
@@ -7,13 +10,13 @@ export default class RateLimit {
     }
 
     async checkRateLimit(keys, resourceType) {
-        console.log('start rate limit')
+        log.info('Start rate limit')
         try {
-            console.log(config.rateLimits)
+            log.debug(config.rateLimits)
             const {duration, limit} = config.rateLimits[resourceType];
-            console.log('duration,limit' + duration, limit)
+            log.debug('duration,limit' + duration, limit)
             for (const key of Object.values(keys)) {
-                console.log('key' + key)
+                log.debug('key' + key)
                 await this.redisClient.incr(key);
                 await this.redisClient.expire(key, duration);
                 const count = parseInt(await this.redisClient.get(key));
@@ -22,7 +25,7 @@ export default class RateLimit {
             return true;
 
         } catch (error) {
-            console.error('Error checking rate limit:', error);
+            log.error('Error checking rate limit:', error);
             return false;
         }
     }

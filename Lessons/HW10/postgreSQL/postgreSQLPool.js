@@ -2,7 +2,9 @@ import path from 'path';
 import fs from 'fs';
 import pkg from 'pg';
 import dotenv from "dotenv";
+import appLogger from "appLogger";
 
+const log = appLogger.getLogger('postgreSQLPool.js');
 dotenv.config();
 const {Pool} = pkg;
 const __dirname = path.resolve();
@@ -21,9 +23,9 @@ async function createTable() {
         const sqlFilePath = path.join(__dirname, 'postgreSQL/createTable.sql');
         const sql = fs.readFileSync(sqlFilePath, 'utf-8');
         const queryResult = await client.query(sql);
-        console.log('Tables created successfully');
+        log.info('Tables created successfully');
     } catch (err) {
-        console.error('Error creating table:', err);
+        log.error('Error creating table:', err);
     } finally {
         client.release();
     }

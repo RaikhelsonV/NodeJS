@@ -1,6 +1,9 @@
 import UrlRepository from '../repository/UrlRepository.js';
 import UrlModel from '../models/urlModel.js';
 import {generateHash} from '../utils/randomCode.js';
+import appLogger from "appLogger";
+
+const log = appLogger.getLogger('UrlService.js');
 
 export default class UrlService {
     constructor() {
@@ -12,7 +15,7 @@ export default class UrlService {
         const code = generateHash(length);
         const {name, url} = payload;
         const urlData = new UrlModel(code, name, url, user);
-        console.log("service = url data" + JSON.stringify(urlData))
+        log.debug(JSON.stringify(urlData))
         await this.urlRepository.add(urlData);
         return code;
     }
@@ -28,11 +31,11 @@ export default class UrlService {
     }
 
     async getUrlsByUser(user) {
-        console.log('service user' + JSON.stringify(user))
+        log.debug(JSON.stringify(user))
         const urls = await this.urlRepository.getUrlByUser(user);
         const result = [];
         for (const url of urls) {
-            console.log(JSON.stringify(url), url.code, url.name)
+            log.debug(JSON.stringify(url), url.code, url.name)
             result.push({
                 name: url.name,
                 url: url.url,
@@ -45,14 +48,11 @@ export default class UrlService {
         const urls = await this.urlRepository.getAll();
         const result = [];
         for (const url of urls) {
-            console.log(JSON.stringify(url), url.code, url.name)
+            log.debug(JSON.stringify(url), url.code, url.name)
             result.push({
                 name: url.name,
                 url: url.url,
             });
-        }
-        for (const [index, url] of result.entries()) {
-            console.log(`Index: ${index}, Value: ${JSON.stringify(url)}`);
         }
         return result;
     }

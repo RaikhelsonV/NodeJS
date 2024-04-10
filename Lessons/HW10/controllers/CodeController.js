@@ -2,6 +2,9 @@ import {Router} from 'express';
 import UrlService from '../services/urlService.js';
 import authMiddleware from '../middlewares/authMiddleware.js';
 import RateLimit from '../middlewares/RateLimit.js';
+import appLogger from "appLogger";
+
+const log = appLogger.getLogger('CodeController.js');
 
 export default class CodeController extends Router {
     constructor(redisClient) {
@@ -19,7 +22,7 @@ export default class CodeController extends Router {
             const code = req.params.code;
             const urlData = await this.urlService.getUrlInfo(code);
 
-            console.log('url' + JSON.stringify(urlData));
+            log.info(JSON.stringify(urlData));
 
             if (urlData) {
                 await this.urlService.addVisit(code);
@@ -33,8 +36,7 @@ export default class CodeController extends Router {
     rateLimitMiddleware = async (req, res, next) => {
         const userId = req.user.user_id;
         const urlCode = req.url;
-        console.log('ID' + req.user.user_id, 'code' + req.url);
-
+        log.info('ID' + req.user.user_id, 'code' + req.url);
         const keys = {
             userRequestsKey: `rateLimitUserId:${userId}`,
             urlRequestsKey: `rateLimitCodeUrl:${urlCode}`

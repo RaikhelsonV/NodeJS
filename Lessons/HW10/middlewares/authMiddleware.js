@@ -1,13 +1,16 @@
 import UserRepository from '../repository/userRepository.js';
 import express from 'express';
+import appLogger from "appLogger";
+
+const log = appLogger.getLogger('authMiddleware.js');
 
 export const jsonParser = express.json();
 export const urlEncodedParser = express.urlencoded({extended: true});
 export default async (req, res, next) => {
     const auth = req.header('Authorization');
-    console.log('AUTH ' + auth);
+    log.debug('Authorization: ' + auth);
     if (auth?.startsWith('Basic')) {
-        console.log('Basic')
+        log.debug('Basic')
         const encodedCredentials = auth.split(' ')[1];
 
         const decodedCredentials = Buffer.from(
@@ -17,27 +20,29 @@ export default async (req, res, next) => {
 
         const [username, password] = decodedCredentials.split(':');
 
-        console.log('Username:', username);
-        console.log('Password:', password);
+        log.debug('Username:', username);
+        log.debug('Password:', password);
 
         const user = await new UserRepository().getUserByName(username);
 
         if (user && user.password === password) {
             req.user = {...user, id: user.id};
-            console.log('REQ USER AUTOR' + JSON.stringify(req.user));
+            log.debug('REQ USER Authorization' + JSON.stringify(req.user));
 
             req.session.user = {...user, id: user.id};
             next();
             return;
         }
+        log.warn('Invalid username or password');
         return res.status(401).end('Invalid username or password');
     }
 
     if (req.session.user) {
-        console.log('AUTH NEXT ' + JSON.stringify(req.session.user));
+        log.debug('Authorization Session ' + JSON.stringify(req.session.user));
         req.user = req.session.user;
         next();
     } else {
+        log.warn('Auth header not provided');
         return res.status(401).end('Auth header not provided');
     }
 };
