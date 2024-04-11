@@ -1,5 +1,6 @@
 import knexClient from "../knex/knexClient.js";
 import UserModelObj from "../knex/objection/UserModelObj.js";
+import UrlModelObj from "../knex/objection/UrlModelObj.js";
 import appLogger from "appLogger";
 
 const log = appLogger.getLogger('UserRepository.js');
@@ -16,6 +17,39 @@ export default class UserRepository {
             throw new Error('Failed to save user');
         }
     }
+
+    async deleteUserAndLinks(user_id) {
+        log.debug("User id for delete: " + user_id);
+        try {
+            await knexClient.transaction(async (trx) => {
+                const hasLinks = await UrlModelObj.query(trx).where('user_id', user_id).first();
+                if (!hasLinks) {
+                    console.log(`No links found for user ${user_id}`);
+                    await UserModelObj.query(trx).delete().where('user_id', user_id);
+                    return;
+                } else {
+                    console.log(`User has links ${user_id}`);
+                    await UrlModelObj.query(trx).delete().where('user_id', user_id);
+                    await UserModelObj.query(trx).delete().where('user_id', user_id);
+                }
+            });
+        } catch (error) {
+            log.error('Error deleting user and links:', error);
+            throw new Error('Failed to delete user and links');
+        }
+    }
+
+    async getUserByEmailAndPassword(email, password) {
+        try {
+            const result = await UserModelObj.query().findOne({email, password});
+            log.debug('DB BY Email AND PASSWORD' + JSON.stringify(result));
+            return result;
+        } catch (error) {
+            log.error(`Error getting user by email and password: ${email}`, error);
+            throw new Error('Failed to get user by email and password');
+        }
+    }
+
 
     async getUserById(user_id) {
         try {
@@ -37,6 +71,16 @@ export default class UserRepository {
         } catch (error) {
             log.error(`Error getting user by name: ${name}`, error);
             throw new Error('Failed to get user by name');
+        }
+    }
+    async getUserByEmail(email) {
+        try {
+            const result = await UserModelObj.query().findOne({decrement});
+            log.debug('DB BY email' + JSON.stringify(result));
+            return result;
+        } catch (error) {
+            log.error(`Error getting user by email: ${email}`, error);
+            throw new Error('Failed to get user by email');
         }
     }
 

@@ -13,12 +13,15 @@ class UserModelObj extends Model {
     static get jsonSchema() {
         return {
             type: 'object',
-            required: ['user_id', 'name', 'password'],
+            required: ['user_id', 'name','surname', 'password', 'email'],
             properties: {
                 id: {type: 'integer'},
                 user_id: {type: 'integer'},
                 name: {type: 'string'},
+                surname: {type: 'string'},
                 password: {type: 'string'},
+                email: {type: 'string'},
+                role: {type: 'string'},
                 created_at: {type: 'string', format: 'date-time'}
             }
         };

@@ -6,6 +6,7 @@ const log = appLogger.getLogger('authMiddleware.js');
 
 export const jsonParser = express.json();
 export const urlEncodedParser = express.urlencoded({extended: true});
+
 export default async (req, res, next) => {
     const auth = req.header('Authorization');
     log.debug('Authorization: ' + auth);
@@ -43,6 +44,9 @@ export default async (req, res, next) => {
         next();
     } else {
         log.warn('Auth header not provided');
+        res.setHeader("WWW-Authenticate", "Basic ")
         return res.status(401).end('Auth header not provided');
     }
+
+
 };

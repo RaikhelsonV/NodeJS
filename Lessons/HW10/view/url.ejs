@@ -34,7 +34,7 @@
             background-color: #ccc;
         }
 
-        form {
+        form:not(.logout)  {
             margin-top: 20px;
             padding: 20px;
             border: 1px solid #ccc;
@@ -46,7 +46,7 @@
 
         input[type='text'],
         input[type='password'],
-        button {
+        button:not(.logout-button)  {
             width: 100%;
             padding: 10px;
             margin: 8px 0;
@@ -56,7 +56,7 @@
             box-sizing: border-box;
         }
 
-        button {
+        button:not(.logout-button)  {
             background-color: #ccc;
             color: black;
             border: none;
@@ -66,9 +66,19 @@
         button:hover {
             background-color: rgb(94, 96, 94);
         }
+
+        .logout-button {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
     </style>
 </head>
 <body>
+<form class="logout"  action="/user/logout"method="POST">
+    <button class="logout-button" type="submit">Logout</button>
+</form>
+
 <h2>URL!</h2>
 
 <form action="/url/addUrl" method="POST">

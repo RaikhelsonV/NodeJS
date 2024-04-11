@@ -39,6 +39,7 @@ export default class UrlService {
             result.push({
                 name: url.name,
                 url: url.url,
+                visits: url.visits
             });
         }
         return result;

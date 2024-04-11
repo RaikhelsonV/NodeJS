@@ -1,10 +1,12 @@
 import UrlController from './controllers/UrlController.js';
 import UserController from './controllers/UserController.js';
 import CodeController from './controllers/CodeController.js';
+import AdminController from "./controllers/AdminController.js";
 import session from 'express-session';
 import cookieParser from 'cookie-parser';
 import RedisStore from 'connect-redis';
 import redisClient from "./redis/redisClient.js";
+
 
 
 let redisStore = new RedisStore({
@@ -14,6 +16,7 @@ let redisStore = new RedisStore({
 const userController = new UserController();
 const urlController = new UrlController();
 const codeController = new CodeController(redisClient);
+const adminController = new AdminController();
 
 
 function initMiddlewares(app) {
@@ -37,6 +40,7 @@ function initControllers(app) {
     app.use('/url', urlController);
     app.use('/code', codeController);
     app.use('/user', userController);
+    app.use('/admin', adminController)
 }
 
 function initViews(app) {

@@ -2,13 +2,17 @@
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
+
 export function up(knex) {
     return knex.schema
         .createTable('users', function (table) {
             table.increments('id').primary();
             table.integer('user_id').unique();
             table.string('name');
+            table.string('surname');
             table.string('password');
+            table.string('email');
+            table.string('role');
             table.timestamp('created_at',{useTz:false});
         })
         .createTable('url_shorter', function (table) {
