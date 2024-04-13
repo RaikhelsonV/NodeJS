@@ -2,6 +2,7 @@ import UserRepository from '../repository/userRepository.js';
 import UserModel from '../models/userModel.js';
 import {generatedUserId} from '../utils/randomCode.js';
 import {UserRoles} from '../models/userRoles.js';
+import PasswordService from "./PasswordService.js";
 import appLogger from "appLogger";
 
 const log = appLogger.getLogger('UserService.js');
@@ -12,8 +13,8 @@ export default class UserService {
     }
 
     async create(name, surname, password, email, role) {
-        console.log("NNNN"+name, surname, password, email, role)
         const existingUsers = await this.userRepository.getAll();
+
         let userRole = UserRoles.USER;
         if (existingUsers.length === 0) {
             userRole = UserRoles.ADMIN;
@@ -21,7 +22,10 @@ export default class UserService {
         if (role === UserRoles.ADMIN) {
             userRole = role;
         }
-        const user = new UserModel(generatedUserId('user'), name, surname, password, email, userRole);
+        const hashedPassword = await PasswordService.hashPassword(password);
+
+        const user = new UserModel(generatedUserId('user'), name, surname, hashedPassword, email, userRole);
+
         log.debug(JSON.stringify(user))
         await this.userRepository.save(user);
         return user;
@@ -37,8 +41,23 @@ export default class UserService {
     }
 
     async authenticate(email, password) {
-        const user = await this.userRepository.getUserByEmailAndPassword(email, password);
-        return user;
+        try {
+            const user = await this.userRepository.getUserByEmail(email);
+
+            if (!user) {
+                return {error: 'User not found'};
+            } else {
+                const passwordMatch = await PasswordService.comparePasswords(password, user.password);
+                if (passwordMatch) {
+                    return user;
+                } else {
+                    return {error: 'Authentication failed'};
+                }
+            }
+        } catch (error) {
+            console.error('Error authenticating user:', error);
+            throw new Error('Error authenticating user');
+        }
 
     }
 
