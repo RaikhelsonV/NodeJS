@@ -19,11 +19,12 @@ export default class AdminController extends Router {
 
     init = () => {
         this.get('/', async (req, res) => {
-            console.log("SSSSSSSSSSSSSSSSSSSSSSSSS"+ JSON.stringify(req.session))
+            console.log("SSSSSSSSSSSSSSSSSSSSSSSSS" + JSON.stringify(req.session))
             console.log(JSON.stringify(req.session.user))
             if (req.session.user && req.session.user.role === 'admin') {
                 const users = await this.userService.getUsersPublicData();
                 for (const user of users) {
+                    console.log(user)
                     user.urls = await this.urlService.getUrlsByUser(user)
                 }
                 res.render('adminPanel.ejs', {users});
@@ -33,15 +34,24 @@ export default class AdminController extends Router {
         });
 
         this.post('/', urlEncodedParser, async (req, res) => {
-            const {name, surname, password, email, role} = req.body;
-            console.log("ROLE"+role)
-            const newUser = await this.userService.create(name, surname, password, email, role);
+            try {
+                const {name, surname, password, email, role} = req.body;
+                console.log("ROLE" + role)
+                const newUser = await this.userService.create(name, surname, password, email, role);
 
-            log.debug(JSON.stringify(newUser))
-            if (newUser.role === 'admin') {
-                res.redirect('/admin');
-            } else {
-                res.redirect('/url');
+                log.debug(JSON.stringify(newUser))
+                if (newUser.role === 'admin') {
+                    res.redirect('/admin');
+                } else {
+                    res.redirect('/url');
+                }
+            } catch (error) {
+                if (error.message === 'Failed to save user') {
+                    res.status(400).render('login.ejs', {error: 'Error registering user'})
+                } else {
+                    res.status(500).render('adminPanel.ejs', {error: 'Error registering user'});
+                }
+
             }
         });
 

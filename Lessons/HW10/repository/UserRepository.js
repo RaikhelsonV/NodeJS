@@ -39,14 +39,17 @@ export default class UserRepository {
         }
     }
 
-    async getUserByEmailAndPassword(email, password) {
+    async getUserByEmail(email) {
         try {
-            const result = await UserModelObj.query().findOne({email, password});
-            log.debug('DB BY Email AND PASSWORD' + JSON.stringify(result));
-            return result;
+            const result = await UserModelObj.query().findOne({email});
+            if (!result) {
+                throw new Error('User not found');
+            }
+            log.debug('DB BY Email  ' + JSON.stringify(result));
+            return result || null;
         } catch (error) {
-            log.error(`Error getting user by email and password: ${email}`, error);
-            throw new Error('Failed to get user by email and password');
+            log.error(`Error getting user by email: ${email}`, error);
+            throw new Error('Failed to get user by email');
         }
     }
 
@@ -73,16 +76,7 @@ export default class UserRepository {
             throw new Error('Failed to get user by name');
         }
     }
-    async getUserByEmail(email) {
-        try {
-            const result = await UserModelObj.query().findOne({decrement});
-            log.debug('DB BY email' + JSON.stringify(result));
-            return result;
-        } catch (error) {
-            log.error(`Error getting user by email: ${email}`, error);
-            throw new Error('Failed to get user by email');
-        }
-    }
+
 
     async getAll() {
         try {

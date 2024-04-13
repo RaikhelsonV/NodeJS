@@ -22,7 +22,6 @@ export default class UrlService {
 
     async getUrlInfo(code) {
         const urlData = await this.urlRepository.get(code);
-        await this.urlRepository.addVisit(code);
         return urlData;
     }
 
@@ -31,11 +30,21 @@ export default class UrlService {
     }
 
     async getUrlsByUser(user) {
-        log.debug(JSON.stringify(user))
-        const urls = await this.urlRepository.getUrlByUser(user);
+        return this.formatUrls( await this.urlRepository.getUrlByUser(user));
+    }
+
+    async getTopFiveUrlsByUser(user_id) {
+        return this.formatUrls(await this.urlRepository.getTopFiveVisitedUrlsByUserId(user_id));
+    }
+
+    async getTopFiveUrls() {
+        return this.formatUrls(await this.urlRepository.getTopFiveVisitedUrls());
+    }
+
+    formatUrls(urls) {
         const result = [];
         for (const url of urls) {
-            log.debug(JSON.stringify(url), url.code, url.name)
+            log.debug(JSON.stringify(url), url.code, url.name);
             result.push({
                 name: url.name,
                 url: url.url,
@@ -45,16 +54,5 @@ export default class UrlService {
         return result;
     }
 
-    async getAllUrls() {
-        const urls = await this.urlRepository.getAll();
-        const result = [];
-        for (const url of urls) {
-            log.debug(JSON.stringify(url), url.code, url.name)
-            result.push({
-                name: url.name,
-                url: url.url,
-            });
-        }
-        return result;
-    }
+
 }

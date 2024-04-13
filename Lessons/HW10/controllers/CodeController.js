@@ -3,6 +3,7 @@ import UrlService from '../services/urlService.js';
 import authMiddleware from '../middlewares/authMiddleware.js';
 import RateLimit from '../middlewares/RateLimit.js';
 import appLogger from "appLogger";
+import {sendVisitsUpdate , sendTopFiveByUser, sendTopFive} from "../webSocket.js";
 
 const log = appLogger.getLogger('CodeController.js');
 
@@ -22,11 +23,19 @@ export default class CodeController extends Router {
             const code = req.params.code;
             const urlData = await this.urlService.getUrlInfo(code);
 
-            log.info(JSON.stringify(urlData));
+            log.info("Code Url Data:", JSON.stringify(urlData));
 
             if (urlData) {
                 await this.urlService.addVisit(code);
                 res.redirect(302, urlData.url);
+
+                const urlLastData = await this.urlService.getUrlInfo(code);
+                sendVisitsUpdate(urlLastData);
+                const urlsByUser = await this.urlService.getTopFiveUrlsByUser(urlData.user_id)
+                sendTopFiveByUser(urlsByUser)
+                const  urls = await this.urlService.getTopFiveUrls()
+                sendTopFive(urls)
+
             } else {
                 res.status(404).send('Not Found');
             }
@@ -51,4 +60,5 @@ export default class CodeController extends Router {
 
         next();
     };
+
 }

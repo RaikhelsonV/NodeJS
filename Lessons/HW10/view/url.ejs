@@ -34,7 +34,7 @@
             background-color: #ccc;
         }
 
-        form:not(.logout)  {
+        form:not(.logout) {
             margin-top: 20px;
             padding: 20px;
             border: 1px solid #ccc;
@@ -46,7 +46,7 @@
 
         input[type='text'],
         input[type='password'],
-        button:not(.logout-button)  {
+        button:not(.logout-button) {
             width: 100%;
             padding: 10px;
             margin: 8px 0;
@@ -56,7 +56,7 @@
             box-sizing: border-box;
         }
 
-        button:not(.logout-button)  {
+        button:not(.logout-button) {
             background-color: #ccc;
             color: black;
             border: none;
@@ -75,7 +75,7 @@
     </style>
 </head>
 <body>
-<form class="logout"  action="/user/logout"method="POST">
+<form class="logout" action="/user/logout" method="POST">
     <button class="logout-button" type="submit">Logout</button>
 </form>
 
@@ -104,6 +104,7 @@
     <tr>
         <th>Name</th>
         <th>URL</th>
+        <th>Visits</th>
     </tr>
     </thead>
     <tbody>
@@ -111,9 +112,11 @@
         <tr>
             <td><%= url.name %></td>
             <td><%= url.url %></td>
+            <td><%= url.visits %></td>
         </tr>
     <% }); %>
     </tbody>
 </table>
+
 </body>
 </html>

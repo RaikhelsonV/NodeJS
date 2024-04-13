@@ -57,6 +57,31 @@ export default class UrlRepository {
             throw new Error('Failed to get URLs by user');
         }
     }
+    async getTopFiveVisitedUrlsByUserId(user_id) {
+        try {
+            const result = await UrlModelObj.query()
+                .where('user_id', user_id)
+                .orderBy('visits', 'desc')
+                .limit(5);
+            log.debug(`Top 5 visited URLs for user ${user_id}: ${JSON.stringify(result)}`);
+            return result;
+        } catch (error) {
+            log.error(`Error getting top 5 visited URLs for user ${user_id}:`, error);
+            throw new Error('Failed to get top 5 visited URLs');
+        }
+    }
+    async getTopFiveVisitedUrls() {
+        try {
+            const result = await UrlModelObj.query()
+                .orderBy('visits', 'desc')
+                .limit(5);
+            log.debug(`Top 5 visited URL: ${JSON.stringify(result)}`);
+            return result;
+        } catch (error) {
+            log.error(`Error getting top 5 visited URLs`, error);
+            throw new Error('Failed to get top 5 visited URLs');
+        }
+    }
 
     async getAll() {
         try {

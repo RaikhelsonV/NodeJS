@@ -101,6 +101,10 @@
             <button type="submit">Login</button>
         </form>
 
+        <% if (typeof error !== 'undefined') { %>
+            <div style="color: red;margin-top: 20px; margin-bottom: 10px;"><%= error %></div>
+        <% } %>
+
         <div class="registration-link">
             <span>Don't have an account?</span>
             <a href="/user/registration">Register here</a>

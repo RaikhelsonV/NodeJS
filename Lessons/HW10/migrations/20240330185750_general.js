@@ -11,7 +11,7 @@ export function up(knex) {
             table.string('name');
             table.string('surname');
             table.string('password');
-            table.string('email');
+            table.string('email').unique();
             table.string('role');
             table.timestamp('created_at',{useTz:false});
         })

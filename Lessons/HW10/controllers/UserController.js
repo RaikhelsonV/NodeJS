@@ -25,7 +25,9 @@ export default class UserController extends Router {
             console.log(email, password)
             try {
                 const user = await this.userService.authenticate(email, password);
-
+                if ('error' in user) {
+                    return res.render('login.ejs', {error: user.error});
+                }
                 if (user) {
                     req.session.user = {name: user.name, email: user.email, password: user.password, role: user.role};
                     if (user.role === 'admin') {
@@ -33,12 +35,10 @@ export default class UserController extends Router {
                     } else {
                         res.redirect('/url');
                     }
-                } else {
-                    res.render('login.ejs', {error: 'Invalid username or password'});
                 }
             } catch (error) {
                 log.error('Error logging in:', error);
-                res.status(500).send('Error logging in');
+                return res.render('login.ejs', {error: 'Error logging in'});
             }
         });
 
@@ -49,17 +49,28 @@ export default class UserController extends Router {
 
 
         this.post('/registration', urlEncodedParser, async (req, res) => {
-            const {name, surname, password, email, role} = req.body;
-            const newUser = await this.userService.create(name, surname, password, email, role);
+            try {
+                const {name, surname, password, email, role} = req.body;
+                const newUser = await this.userService.create(name, surname, password, email, role);
 
-            req.session.user = {name: name, email: email, password: password, role: newUser.role};
+                req.session.user = {name: name, email: email, password: password, role: newUser.role};
 
-            log.debug(JSON.stringify(newUser))
-            if (newUser.role === 'admin') {
-                res.redirect('/admin');
-            } else {
-                res.redirect('/url');
+                log.debug(JSON.stringify(newUser))
+                if (newUser.role === 'admin') {
+                    res.redirect('/admin');
+                } else {
+                    res.redirect('/url');
+                }
+            } catch (error) {
+                log.error('Error creating user:', error);
+                if (error.message === 'User with this email already exists') {
+                    res.status(400).render('registration.ejs', {error: 'User with this email already exists. Please register with a different email.'});
+                } else {
+                    res.status(500).render('registration.ejs', {error: 'Error registering user'});
+                }
+
             }
+
         });
 
         this.post('/logout', (req, res) => {

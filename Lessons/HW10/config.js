@@ -1,12 +1,12 @@
 const config = {
     rateLimits: {
         user: {
-            limit: 3,
-            duration: 20
+            limit: 10,
+            duration: 60
         },
         url: {
             limit: 10,
-            duration: 20
+            duration: 60
         }
     }
 };

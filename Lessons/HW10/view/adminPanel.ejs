@@ -136,6 +136,11 @@
     <button type="submit">Create User</button>
 </form>
 
+
+<% if (typeof error !== 'undefined') { %>
+    <div style="color: red;margin-top: 20px; margin-bottom: 10px;"><%= error %></div>
+<% } %>
+
 <div style="margin-top: 20px"></div>
 
 <table>
