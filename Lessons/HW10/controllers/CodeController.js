@@ -3,7 +3,7 @@ import UrlService from '../services/urlService.js';
 import authMiddleware from '../middlewares/authMiddleware.js';
 import RateLimit from '../middlewares/RateLimit.js';
 import appLogger from "appLogger";
-import {sendVisitsUpdate , sendTopFiveByUser, sendTopFive} from "../webSocket.js";
+import {sendVisitsUpdate, sendTopFiveByUser, sendTopFive} from "../webSocket.js";
 
 const log = appLogger.getLogger('CodeController.js');
 
@@ -23,22 +23,36 @@ export default class CodeController extends Router {
             const code = req.params.code;
             const urlData = await this.urlService.getUrlInfo(code);
 
-            log.info("Code Url Data:", JSON.stringify(urlData));
+            console.log("Code Url Data:", JSON.stringify(urlData));
 
-            if (urlData) {
+            if (!urlData) {
+                res.status(404).send('Not Found');
+                return;
+            }
+
+            if (!urlData.enabled) {
+                res.status(404).send('Link is not active');
+                return;
+            }
+
+
+            if (urlData.enabled === true) {
+
                 await this.urlService.addVisit(code);
                 res.redirect(302, urlData.url);
+
+                if (urlData.type === "one_time"){
+                   await this.urlService.updateEnabledStatus(code, false);
+                }
 
                 const urlLastData = await this.urlService.getUrlInfo(code);
                 sendVisitsUpdate(urlLastData);
                 const urlsByUser = await this.urlService.getTopFiveUrlsByUser(urlData.user_id)
                 sendTopFiveByUser(urlsByUser)
-                const  urls = await this.urlService.getTopFiveUrls()
+                const urls = await this.urlService.getTopFiveUrls()
                 sendTopFive(urls)
-
-            } else {
-                res.status(404).send('Not Found');
             }
+
         });
     };
 

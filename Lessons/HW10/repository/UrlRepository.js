@@ -15,10 +15,13 @@ export default class UrlRepository {
                 url: url.url,
                 created_at: url.created_at,
                 visits: url.visits,
+                expire_at: url.expire_at,
+                type: url.type,
+                enabled: url.enabled,
                 user_id: url.user.user_id,
             });
 
-            log.debug("Inserted url:", insertedURL);
+            log.debug("Inserted url:", JSON.stringify(insertedURL));
         } catch (error) {
             log.error('Error saving url:', error);
             throw new Error('Failed to save url');
@@ -33,6 +36,75 @@ export default class UrlRepository {
         } catch (error) {
             log.error('Error adding visit:', error);
             throw new Error('Failed to add visit');
+        }
+    }
+
+    async updateEnabledStatus(code, status) {
+        try {
+            await UrlModelObj.query()
+                .where('code', code)
+                .patch({
+                    enabled: status
+                });
+            log.debug(`Enabled status for URL with code ${code} updated to ${status}`);
+        } catch (error) {
+            log.error(`Error updating enabled status for URL with code ${code}:`, error);
+            throw new Error('Failed to update enabled status');
+        }
+    }
+    async updateType(code, type) {
+        try {
+            await UrlModelObj.query()
+                .where('code', code)
+                .patch({
+                    type: type
+                });
+            log.debug(`Type for URL with code ${code} updated to ${type}`);
+        } catch (error) {
+            log.error(`Error updating type for URL with code ${code}:`, error);
+            throw new Error('Failed to update type');
+        }
+    }
+
+    async updateTypeAndExpireAt(code, type, expire_at){
+        try {
+            await UrlModelObj.query()
+                .where('code', code)
+                .patch({
+                    type: type,
+                    expire_at: expire_at,
+                });
+            log.debug(`Type for URL with code ${code} updated to ${type}`);
+        } catch (error) {
+            log.error(`Error updating type for URL with code ${code}:`, error);
+            throw new Error('Failed to update type');
+        }
+    }
+
+    async updateExpireAt(code, expire_at){
+        try {
+            await UrlModelObj.query()
+                .where('code', code)
+                .patch({
+                    expire_at: expire_at,
+                });
+            log.debug(`Expire_at for URL with code ${code} updated to ${expire_at}`);
+        } catch (error) {
+            log.error(`Error updating expire_at for URL with code ${code}:`, error);
+            throw new Error('Failed to update expire_at');
+        }
+    }
+
+    async delete(code) {
+        try {
+            const deletedUrl = await UrlModelObj.query()
+                .delete()
+                .where('code', code);
+            log.debug("Deleted url:", deletedUrl);
+            return true;
+        } catch (error) {
+            log.error(`Error deleting url with code ${code}:`, error);
+            throw new Error('Failed to delete url');
         }
     }
 
@@ -57,6 +129,7 @@ export default class UrlRepository {
             throw new Error('Failed to get URLs by user');
         }
     }
+
     async getTopFiveVisitedUrlsByUserId(user_id) {
         try {
             const result = await UrlModelObj.query()
@@ -70,6 +143,7 @@ export default class UrlRepository {
             throw new Error('Failed to get top 5 visited URLs');
         }
     }
+
     async getTopFiveVisitedUrls() {
         try {
             const result = await UrlModelObj.query()
@@ -86,10 +160,9 @@ export default class UrlRepository {
     async getAll() {
         try {
             const result = await UrlModelObj.query();
-            console.log('DB All url' + JSON.stringify(result));
             return result;
         } catch (error) {
-            console.error('Error getting all url:', error);
+            log.error('Error getting all url:', error);
             throw new Error('Failed to get all url');
         }
     }

@@ -21,20 +21,25 @@
         table {
             border: 1px solid #ccc;
             border-radius: 5px;
-            width: 50%;
+            width: 90%;
         }
 
         th,
         td {
             padding: 8px;
             text-align: left;
+
         }
+       table .code , .enabled{
+           width: 10%;
+           word-break: break-all;
+       }
 
         th {
             background-color: #ccc;
         }
 
-        form:not(.logout) {
+        form:not(.logout, .del-form, .upd-form) {
             margin-top: 20px;
             padding: 20px;
             border: 1px solid #ccc;
@@ -46,7 +51,9 @@
 
         input[type='text'],
         input[type='password'],
-        button:not(.logout-button) {
+        input[type="date"],
+        select,
+        button:not(.logout-button,.upd-btn) {
             width: 100%;
             padding: 10px;
             margin: 8px 0;
@@ -72,6 +79,15 @@
             right: 10px;
             top: 10px;
         }
+
+        .upd-btn {
+            padding: 8px; /* Уменьшаем внутренние отступы */
+            background-color: #ccc;
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
+
     </style>
 </head>
 <body>
@@ -81,30 +97,60 @@
 
 <h2>URL!</h2>
 
-<form action="/url/addUrl" method="POST">
+<form id="urlForm" action="/url/addUrl" method="POST" onsubmit="return validateForm()">
     <input
             type="text"
             name="name"
             placeholder="Enter the name"
             required
+            minlength="1"
+            maxlength="50"
     />
     <input
-            type="text"
+            type="url"
             name="url"
             placeholder="Enter the URL"
             required
     />
+    <input
+            type="text"
+            name="code"
+            placeholder="Enter custom code (optional)"
+            minlength="10"
+            maxlength="50"
+    />
+    <div id="codeError" class="error" style="display: none;">The code must be at least 10 characters long.</div>
+    <select name="type">
+        <option value="permanent">Permanent</option>
+        <option value="temporary">Temporary</option>
+        <option value="one_time">One-Time</option>
+    </select>
+
+    <div id="expireDateField" style="display: none;">
+        <input type="date" name="expire_at">
+    </div>
 
     <button type="submit">Create URL</button>
 </form>
 
 <div style="margin-top: 20px"></div>
+
+<% if (typeof error !== 'undefined' || deleteSuccess || addSuccess)  { %>
+    <div style="margin-top: 20px; margin-bottom: 10px; text-align: center; color: <%= error ? 'red' : 'green' %>;">
+        <%= error ? error : (deleteSuccess ? 'URL was successfully deleted!' : (addSuccess ? 'URL successfully added' : '')) %>
+    </div>
+<% } %>
 <table>
     <thead>
     <tr>
         <th>Name</th>
         <th>URL</th>
         <th>Visits</th>
+        <th class="code">Code</th>
+        <th>Type</th>
+        <th>Expire_At</th>
+        <th class="enabled">Enabled</th>
+        <th>ACTION</th>
     </tr>
     </thead>
     <tbody>
@@ -113,10 +159,93 @@
             <td><%= url.name %></td>
             <td><%= url.url %></td>
             <td><%= url.visits %></td>
+            <td class="code"><a href="/code/<%= url.code %>"><%= url.code %></a></td>
+            <td>
+                <form class="upd-form" action="/url/updateType" method="POST">
+                    <input type="hidden" name="code" value="<%= url.code %>">
+                    <select class="upd-sel" name="type"  onchange="this.form.submit()">
+                        <option class="upd-opt" value="one_time" <%= url.type === 'one_time' ? 'selected' : '' %>>One-Time</option>
+                        <option class="upd-opt" value="temporary" <%= url.type === 'temporary' ? 'selected' : '' %>>Temporary</option>
+                        <option class="upd-opt" value="permanent" <%= url.type === 'permanent' ? 'selected' : '' %>>Permanent</option>
+                    </select>
+
+                </form>
+
+            </td>
+
+            <td>
+                <% if (url.expire_at !== null || url.type === 'temporary') { %>
+                    <form class="upd-form" action="/url/updateDate" method="POST">
+                        <input type="hidden" name="code" value="<%= url.code %>">
+                        <input id="expireDateInput" type="date" name="expire_at" value="<%= new Date(url.expire_at).toISOString().substr(0,10) %>" onchange="this.form.submit()">
+                    </form>
+                <% } else { %>
+                    <input type="hidden" name="expire_at">
+                <% } %>
+            </td>
+
+            <td class="enabled">
+                <form class="upd-form" action="/url/updateEnabledStatus" method="POST">
+                    <input type="hidden" name="code" value="<%= url.code %>">
+                    <select class="upd-sel" name="enabled" onchange="this.form.submit()">
+                        <option class="upd-opt" value="true" <%= url.enabled ? 'selected' : '' %>>True</option>
+                        <option class="upd-opt" value="false" <%= !url.enabled ? 'selected' : '' %>>False</option>
+                    </select>
+                </form>
+            </td>
+            <td>
+                <form class="del-form" action="/url/delete" method="POST">
+                    <input type="hidden" name="code" value="<%= url.code %>">
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
         </tr>
     <% }); %>
     </tbody>
 </table>
+<script>
+    // Сначала проверяем состояние селекта при загрузке страницы
+    document.addEventListener('DOMContentLoaded', function () {
+        const selectType = document.querySelector('select[name="type"]');
+        const expireDateField = document.getElementById('expireDateField');
+
+        if (selectType.value === 'temporary') {
+            expireDateField.style.display = 'block';
+            expireDateField.required = true;
+        } else {
+            expireDateField.style.display = 'none';
+
+        }
+
+        // Далее добавляем обработчик события на изменение селекта
+        selectType.addEventListener('change', function () {
+            if (this.value === 'temporary') {
+                expireDateField.style.display = 'block';
+                expireDateField.required = true;
+            } else {
+                expireDateField.style.display = 'none';
+            }
+        });
+
+
+    });
+
+    function validateForm() {
+
+        const selectType = document.querySelector('select[name="type"]');
+        const expireDateField = document.getElementById('expireDateField').querySelector('input[type="date"]');
+
+        if (selectType.value === 'temporary' && !expireDateField.value) {
+            alert('Please select expiration date for temporary URL');
+            return false; // Отменяем отправку формы
+        }
+
+
+        return true; // Продолжаем отправку формы
+    }
+
+
+</script>
 
 </body>
 </html>

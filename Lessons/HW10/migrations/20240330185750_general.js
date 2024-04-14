@@ -22,6 +22,9 @@ export function up(knex) {
             table.string('url');
             table.timestamp('created_at',{useTz:false});
             table.integer('visits').defaultTo(0);
+            table.timestamp('expire_at', { useTz: false });
+            table.enum('type', ['permanent', 'temporary', 'one_time']);
+            table.boolean('enabled');
             table.integer('user_id').references('user_id').inTable('users');
         });
 };

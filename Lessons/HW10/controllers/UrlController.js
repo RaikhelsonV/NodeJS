@@ -26,14 +26,85 @@ export default class UrlController extends Router {
         });
 
         this.post('/addUrl', urlEncodedParser, async (req, res) => {
-            const user = await this.userRepository.getUserByName(req.user.name);
-            log.info(JSON.stringify(user));
-            req.user = user;
-            await this.urlService.addUrl(req.body, req.user);
-            const urls = await this.urlService.getUrlsByUser(user)
-            sendAllUserLinksCountUpdate(urls.length)
-            res.redirect('/url');
-            return;
+            let addSuccess = false;
+            try {
+                const user = await this.userRepository.getUserByName(req.user.name);
+
+                const {name, url, code, type, expire_at} = req.body;
+
+                let expireDate = null;
+                if (type === 'temporary') {
+                    expireDate = expire_at.toString();
+                }
+
+                req.user = user;
+
+                await this.urlService.addUrl({name, url, code, type, expire_at: expireDate}, req.user);
+                const urls = await this.urlService.getUrlsByUser(user)
+                sendAllUserLinksCountUpdate(urls.length)
+
+                addSuccess = true;
+                res.redirect(`/url?addSuccess=${addSuccess}`);
+                return;
+            } catch (error) {
+                res.render('url', {
+                    userUrls: [],
+                    deleteSuccess: false,
+                    addSuccess: false,
+                    error: 'URL with this code already exists.'
+                });
+            }
+
+        });
+
+        this.post('/updateEnabledStatus', urlEncodedParser, async (req, res) => {
+            const code = req.body.code;
+            const status = req.body.enabled === 'true';
+            try {
+                await this.urlService.updateEnabledStatus(code, status);
+                res.redirect('/url');
+            } catch (error) {
+                log.error(`Error updating enabled status for URL with code ${code}:`, error);
+                res.render('url', {
+                    userUrls: [],
+                    deleteSuccess: false,
+                    addSuccess: false,
+                    error: error.message,
+                });
+
+            }
+        });
+        this.post('/updateType', urlEncodedParser, async (req, res) => {
+            const code = req.body.code;
+            const type = req.body.type;
+
+            try {
+                if (type === 'one_time' || type === 'permanent') {
+                    await this.urlService.updateTypeAndExpireAt(code, type, null);
+                } else {
+                    await this.urlService.updateType(code, type);
+                }
+
+                res.redirect('/url');
+            } catch (error) {
+                log.error(`Error updating type for URL with code ${code}:`, error);
+                res.sendStatus(500);
+
+            }
+        });
+
+        this.post('/updateDate', urlEncodedParser, async (req, res) => {
+            const code = req.body.code;
+            const expire_at = req.body.expire_at;
+            console.log("Expire" + JSON.stringify(req.body))
+            try {
+                await this.urlService.updateDate(code, expire_at);
+
+                res.redirect('/url');
+            } catch (error) {
+                log.error(`Error updating expire_at for URL with code ${code}:`, error);
+                res.sendStatus(500);
+            }
         });
 
         this.get('/info/:code', async (req, res) => {
@@ -45,8 +116,25 @@ export default class UrlController extends Router {
         this.get('/', async (req, res) => {
             const user = await this.userRepository.getUserByName(req.user.name);
             const userUrls = await this.urlService.getUrlsByUser(user);
-            res.render('url', {userUrls});
+            await this.urlService.updateExpiredUrls(userUrls)
 
+            res.render('url', {userUrls, deleteSuccess: false, addSuccess: false, error: null});
+        });
+
+        this.post('/delete', urlEncodedParser, async (req, res) => {
+            const code = req.body.code;
+            try {
+                const result = await this.urlService.deleteUrl(code);
+
+
+                const deleteSuccess = result;
+
+                res.redirect(`/url?deleteSuccess=${deleteSuccess}`);
+            } catch (error) {
+                log.error('Error deleting url:', error);
+                res.render('url', {userUrls: [], deleteSuccess: false, addSuccess: false, error: error.message});
+
+            }
         });
     };
 }
