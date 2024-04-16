@@ -59,6 +59,7 @@
             box-sizing: border-box;
         }
 
+        ul,
         button:not(.logout-button) {
             background-color: #ccc;
             color: black;
@@ -66,9 +67,23 @@
             cursor: pointer;
         }
 
+        ul:hover,
         button:hover {
             background-color: rgb(94, 96, 94);
         }
+
+        ul {
+            width: 70px;
+            list-style-type: none;
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+
+        }
+
 
         .logout-button {
             position: absolute;
@@ -98,6 +113,10 @@
 <form class="logout" action="/admin/logout" method="POST">
     <button class="logout-button" type="submit">Logout</button>
 </form>
+
+<ul>
+    <li><a href="/url">URL</a></li>
+</ul>
 
 <h2>HELLO ADMIN</h2>
 
@@ -140,13 +159,13 @@
     <button type="submit">Create User</button>
 </form>
 
-
 <% if (typeof error !== 'undefined') { %>
     <div style="color: red;margin-top: 20px; margin-bottom: 10px;"><%= error %></div>
 <% } %>
 
 <div style="margin-top: 20px"></div>
 
+<!-- Main table for displaying users and their links -->
 <table>
     <thead>
     <th>ID</th>
@@ -155,8 +174,8 @@
     <th>EMAIL</th>
     <th>ROLE</th>
     <th>CREATED_TIME</th>
-    <th>URLS</th>
     <th>ACTION</th>
+    <th>RATE LIMIT</th>
     </thead>
     <tbody>
     <% for (let user of users) { %>
@@ -167,26 +186,42 @@
             <td><%= user.email %></td>
             <td><%= user.role %></td>
             <td><%= new Date(user.created_at).toLocaleString() %></td>
-
-            <td>
-                <% if (user.urls && user.urls.length > 0) { %>
-                    <ul>
-                        <% for (let url of user.urls) { %>
-                            <li><a href="<%= url.url %>"><%= url.name %></a></li>
-                            <li>visits: <%= url.visits %></li>
-                        <% } %>
-                    </ul>
-                <% } else { %>
-                    No links
-                <% } %>
-            </td>
-
-
             <td>
                 <form class="del-form" action="/admin/delete" method="POST">
                     <input type="hidden" name="user_id" value="<%= user.user_id %>">
                     <button type="submit">Delete</button>
                 </form>
+            </td>
+            <td>
+                <form class="del-form" action="/admin/deleteRateLimits" method="POST">
+                    <input type="hidden" name="user_id" value="<%= user.user_id %>">
+                    <button type="submit">Delete All Rate Limits</button>
+                </form>
+            </td>
+        </tr>
+        <!-- Sub-table for displaying user URLs -->
+        <tr>
+            <td colspan="8">
+                <table>
+                    <thead>
+                    <th>URL</th>
+                    <th>Visits</th>
+                    </thead>
+                    <tbody>
+                    <% if (user.urls && user.urls.length > 0) { %>
+                        <% for (let url of user.urls) { %>
+                            <tr>
+                                <td><a href="<%= url.url %>"><%= url.name %></a></td>
+                                <td><%= url.visits %></td>
+                            </tr>
+                        <% } %>
+                    <% } else { %>
+                        <tr>
+                            <td colspan="2">No links</td>
+                        </tr>
+                    <% } %>
+                    </tbody>
+                </table>
             </td>
         </tr>
     <% } %>

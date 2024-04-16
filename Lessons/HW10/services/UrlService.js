@@ -82,6 +82,11 @@ export default class UrlService {
         return this.formatUrls(await this.urlRepository.getUrlByUser(user));
     }
 
+    async getUrlsByUserId(user_id) {
+        return this.formatUrls(await this.urlRepository.getUrlByUserId(user_id));
+    }
+
+
     async getTopFiveUrlsByUser(user_id) {
         return this.formatUrls(await this.urlRepository.getTopFiveVisitedUrlsByUserId(user_id));
     }

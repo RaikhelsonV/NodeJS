@@ -1,7 +1,9 @@
 import UserService from '../services/userService.js';
 import UrlService from "../services/UrlService.js";
+import IpService from "../services/IpService.js";
 import {Router} from 'express';
 import {jsonParser, urlEncodedParser} from '../middlewares/authMiddleware.js';
+import {publicIpv4} from 'public-ip';
 import appLogger from "appLogger";
 
 
@@ -12,6 +14,7 @@ export default class UserController extends Router {
         super();
         this.userService = new UserService();
         this.urlService = new UrlService();
+        this.ipService = new IpService();
         this.init();
     }
 
@@ -29,7 +32,17 @@ export default class UserController extends Router {
                     return res.render('login.ejs', {error: user.error});
                 }
                 if (user) {
-                    req.session.user = {name: user.name, email: user.email, password: user.password, role: user.role};
+                    const IP = await publicIpv4();
+                    await this.ipService.saveUserIPAddress(user.user_id, IP);
+
+                    req.session.user = {
+                        id: user.id,
+                        user_id: user.user_id,
+                        name: user.name,
+                        email: user.email,
+                        password: user.password,
+                        role: user.role
+                    };
                     if (user.role === 'admin') {
                         res.redirect('/admin');
                     } else {
@@ -52,8 +65,17 @@ export default class UserController extends Router {
             try {
                 const {name, surname, password, email, role} = req.body;
                 const newUser = await this.userService.create(name, surname, password, email, role);
+                const IP = await publicIpv4();
+                await this.ipService.saveUserIPAddress(newUser.user_id, IP);
 
-                req.session.user = {name: name, email: email, password: password, role: newUser.role};
+                req.session.user = {
+                    id: newUser.id,
+                    user_id: newUser.user_id,
+                    name: name,
+                    email: email,
+                    password: password,
+                    role: newUser.role
+                };
 
                 log.debug(JSON.stringify(newUser))
                 if (newUser.role === 'admin') {

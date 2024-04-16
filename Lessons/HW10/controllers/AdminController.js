@@ -1,18 +1,23 @@
 import UserService from '../services/userService.js';
 import UrlService from "../services/UrlService.js";
+import IpService from "../services/IpService.js";
 import {Router} from 'express';
 import {urlEncodedParser} from '../middlewares/authMiddleware.js';
 import appLogger from "appLogger";
 import authMiddleware from "../middlewares/authMiddleware.js";
+import RateLimit from "../middlewares/RateLimit.js";
 
 
 const log = appLogger.getLogger('UserController.js');
 
 export default class AdminController extends Router {
-    constructor() {
+    constructor(redisClient) {
         super();
         this.userService = new UserService();
         this.urlService = new UrlService();
+        this.ipService = new IpService();
+        this.redisClient = redisClient;
+        this.rateLimit = new RateLimit(this.redisClient);
         this.use(authMiddleware);
         this.init();
     }
@@ -24,7 +29,6 @@ export default class AdminController extends Router {
             if (req.session.user && req.session.user.role === 'admin') {
                 const users = await this.userService.getUsersPublicData();
                 for (const user of users) {
-                    console.log(user)
                     user.urls = await this.urlService.getUrlsByUser(user)
                 }
                 res.render('adminPanel.ejs', {users});
@@ -56,9 +60,7 @@ export default class AdminController extends Router {
         });
 
         this.post('/delete', urlEncodedParser, async (req, res) => {
-            console.log("aaaaaaaaaaaaaaaa" + JSON.stringify(req.body))
             const user_id = req.body.user_id;
-            console.log("vvvvvvvvvvvvvvv" + JSON.stringify(user_id))
             try {
                 await this.userService.delete(user_id);
                 res.redirect('/admin');
@@ -67,6 +69,32 @@ export default class AdminController extends Router {
                 res.status(500).send('Error deleting user');
             }
         });
+
+        this.post('/deleteRateLimits', urlEncodedParser, async (req, res) => {
+            console.log("Rate Limit body" + JSON.stringify(req.body))
+            const user_id = req.body.user_id;
+            console.log("Rate Limit user_id" + JSON.stringify(user_id))
+            try {
+                await this.rateLimit.deleteRateLimitByUserId(user_id);
+
+                const urls = await this.urlService.getUrlsByUserId(user_id)
+
+                for (const url of urls) {
+                    await this.rateLimit.deleteRateLimitByUrlCode(url.code);
+                }
+                const ip_addresses = await this.ipService.getUserIpAddresses(user_id)
+
+                for (const ip of ip_addresses) {
+
+                    await this.rateLimit.deleteRateLimitByIP(ip);
+                }
+                res.redirect('/admin');
+            } catch (error) {
+                log.error('Error deleting rate limits:', error);
+                res.status(500).send('Error deleting rate limits');
+            }
+        });
+
 
         this.post('/logout', (req, res) => {
             console.log("LOGOUT")

@@ -1,4 +1,3 @@
-import knexClient from "../knex/knexClient.js";
 import UrlModelObj from "../knex/objection/UrlModelObj.js";
 import appLogger from "appLogger";
 
@@ -129,6 +128,17 @@ export default class UrlRepository {
             throw new Error('Failed to get URLs by user');
         }
     }
+    async getUrlByUserId(user_id) {
+        try {
+            const urls = await UrlModelObj.query().where('user_id', user_id);
+            log.debug('DB All url by user' + JSON.stringify(urls));
+            return urls;
+        } catch (error) {
+            log.error('Error getting URLs by user:', error);
+            throw new Error('Failed to get URLs by user');
+        }
+    }
+
 
     async getTopFiveVisitedUrlsByUserId(user_id) {
         try {

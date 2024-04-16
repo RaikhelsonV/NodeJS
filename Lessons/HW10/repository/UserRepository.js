@@ -1,7 +1,9 @@
 import knexClient from "../knex/knexClient.js";
 import UserModelObj from "../knex/objection/UserModelObj.js";
 import UrlModelObj from "../knex/objection/UrlModelObj.js";
+import IpModelObj from "../knex/objection/IpModelObj.js";
 import appLogger from "appLogger";
+
 
 const log = appLogger.getLogger('UserRepository.js');
 
@@ -18,17 +20,20 @@ export default class UserRepository {
         }
     }
 
-    async deleteUserAndLinks(user_id) {
+    async deleteUserAndAssociatedData(user_id) {
         log.debug("User id for delete: " + user_id);
         try {
             await knexClient.transaction(async (trx) => {
+
                 const hasLinks = await UrlModelObj.query(trx).where('user_id', user_id).first();
                 if (!hasLinks) {
                     console.log(`No links found for user ${user_id}`);
+                    await IpModelObj.query(trx).delete().where('user_id', user_id);
                     await UserModelObj.query(trx).delete().where('user_id', user_id);
                     return;
                 } else {
                     console.log(`User has links ${user_id}`);
+                    await IpModelObj.query(trx).delete().where('user_id', user_id);
                     await UrlModelObj.query(trx).delete().where('user_id', user_id);
                     await UserModelObj.query(trx).delete().where('user_id', user_id);
                 }

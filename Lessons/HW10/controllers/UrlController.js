@@ -6,15 +6,18 @@ import {jsonParser, urlEncodedParser} from '../middlewares/authMiddleware.js';
 import authMiddleware from '../middlewares/authMiddleware.js';
 import {sendAllUserLinksCountUpdate} from "../webSocket.js";
 import appLogger from "appLogger";
+import RateLimit from "../middlewares/RateLimit.js";
 
 const log = appLogger.getLogger('UrlController.js');
 
 export default class UrlController extends Router {
-    constructor() {
+    constructor(redisClient) {
         super();
         this.urlService = new UrlService();
         this.userService = new UserService()
         this.userRepository = new UserRepository();
+        this.redisClient = redisClient;
+        this.rateLimit = new RateLimit(this.redisClient);
         this.use(authMiddleware);
         this.init();
     }
@@ -126,6 +129,7 @@ export default class UrlController extends Router {
             try {
                 const result = await this.urlService.deleteUrl(code);
 
+                await this.rateLimit.deleteRateLimitByUrlCode(code);
 
                 const deleteSuccess = result;
 

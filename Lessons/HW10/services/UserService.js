@@ -25,15 +25,13 @@ export default class UserService {
         const hashedPassword = await PasswordService.hashPassword(password);
 
         const user = new UserModel(generatedUserId('user'), name, surname, hashedPassword, email, userRole);
-
-        log.debug(JSON.stringify(user))
         await this.userRepository.save(user);
         return user;
     }
 
     async delete(user_id) {
         try {
-            await this.userRepository.deleteUserAndLinks(user_id);
+            await this.userRepository.deleteUserAndAssociatedData(user_id);
         } catch (error) {
             log.error('Error,' + error);
             throw new Error('Error');

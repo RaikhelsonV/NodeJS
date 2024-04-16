@@ -4,6 +4,8 @@ import authMiddleware from '../middlewares/authMiddleware.js';
 import RateLimit from '../middlewares/RateLimit.js';
 import appLogger from "appLogger";
 import {sendVisitsUpdate, sendTopFiveByUser, sendTopFive} from "../webSocket.js";
+import requestIp from 'request-ip';
+import { publicIpv4 } from 'public-ip';
 
 const log = appLogger.getLogger('CodeController.js');
 
@@ -57,22 +59,38 @@ export default class CodeController extends Router {
     };
 
     rateLimitMiddleware = async (req, res, next) => {
+        console.log(JSON.stringify(req.user));
         const userId = req.user.user_id;
         const urlCode = req.url;
-        log.info('ID' + req.user.user_id, 'code' + req.url);
-        const keys = {
-            userRequestsKey: `rateLimitUserId:${userId}`,
-            urlRequestsKey: `rateLimitCodeUrl:${urlCode}`
-        };
 
-        const isUserRateLimited = await this.rateLimit.checkRateLimit(keys, "user");
-        const isUrlRateLimited = await this.rateLimit.checkRateLimit(keys, "url");
-        if (!isUserRateLimited || !isUrlRateLimited) {
-            res.status(429).send('Rate Limit Exceeded');
-            return;
+        try {
+            const ipAddress = req.ip;
+            console.log("IP: " + ipAddress);
+
+            const IP = await publicIpv4();
+            console.log("Public IPv4:", IP);
+
+            const keys = {
+                userRequestsKey: `rateLimitUserId:${userId}`,
+                urlRequestsKey: `rateLimitCodeUrl:${urlCode}`,
+                ipRequestsKey: `rateLimitIP:${IP}`,
+            };
+
+            const isUserRateLimited = await this.rateLimit.checkRateLimit(keys, "user");
+            const isUrlRateLimited = await this.rateLimit.checkRateLimit(keys, "url");
+            const isIPRateLimited = await this.rateLimit.checkRateLimit(keys, "ip");
+
+            if (!isUserRateLimited || !isUrlRateLimited || !isIPRateLimited) {
+                res.status(429).send('Rate Limit Exceeded');
+                return;
+            }
+
+            next();
+        } catch (error) {
+            console.error("An error occurred:", error);
+            res.status(500).send('Internal Server Error');
         }
-
-        next();
     };
+
 
 }

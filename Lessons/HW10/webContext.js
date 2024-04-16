@@ -14,9 +14,9 @@ let redisStore = new RedisStore({
 });
 
 const userController = new UserController();
-const urlController = new UrlController();
+const urlController = new UrlController(redisClient);
 const codeController = new CodeController(redisClient);
-const adminController = new AdminController();
+const adminController = new AdminController(redisClient);
 
 
 function initMiddlewares(app) {
