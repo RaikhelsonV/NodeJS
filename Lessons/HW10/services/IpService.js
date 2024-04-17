@@ -34,7 +34,13 @@ export default class IpService {
     async getUserIpAddresses(user_id) {
         try {
             const ipAddresses = await this.ipRepository.getIpAddressesByUserId(user_id);
-            return ipAddresses;
+            const result = [];
+            for (const ip of ipAddresses) {
+                result.push({
+                    ip_address: ip.ip_address,
+                });
+            }
+            return result;
         } catch (error) {
             console.error('Error getting user IP addresses:', error);
             throw error;

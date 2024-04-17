@@ -20,6 +20,7 @@ export default class RateLimit {
                 await this.redisClient.incr(key);
                 await this.redisClient.expire(key, duration);
                 const count = parseInt(await this.redisClient.get(key));
+                console.log("Count" + count)
                 if (count >= limit) return false;
             }
             return true;
@@ -66,6 +67,16 @@ export default class RateLimit {
             console.log(`Rate limits deleted for ip: ${ip}`);
         } catch (error) {
             console.error('Error deleting rate limits:', error);
+            throw error;
+        }
+    }
+
+    async getValueByKey(code) {
+        const urlKey = `rateLimitCodeUrl:/${code}`;
+        try {
+            return await this.redisClient.get(urlKey);
+        } catch (error) {
+            log.error('Error getting value by key:', error);
             throw error;
         }
     }

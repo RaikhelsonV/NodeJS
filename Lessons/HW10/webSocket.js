@@ -55,4 +55,14 @@ function sendTopFive(topUrls) {
     }
 }
 
-export {init, sendVisitsUpdate, sendAllUserLinksCountUpdate, sendTopFiveByUser, sendTopFive};
+function sendRateLimitByCode(limitList) {
+    if (wss) {
+        wss.clients.forEach(client => {
+            if (client.readyState === WebSocket.OPEN) {
+                client.send(JSON.stringify({type: 'rateLimits', data: limitList}));
+            }
+        });
+    }
+}
+
+export {init, sendVisitsUpdate, sendAllUserLinksCountUpdate, sendTopFiveByUser, sendTopFive, sendRateLimitByCode};

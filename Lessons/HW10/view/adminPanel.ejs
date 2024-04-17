@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Document</title>
     <style>
+
         body {
             display: flex;
             flex-direction: column;
@@ -13,25 +14,41 @@
             font-family: Arial, sans-serif;
         }
 
+        .header {
+            display: flex;
+            justify-content: space-between;
+            width: 70%;
+            margin-bottom: 20px;
+        }
+
         h2 {
             text-align: center;
             margin-bottom: 20px;
         }
 
-        table {
+        .sub_table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .main_table {
             border: 1px solid #ccc;
+            border-collapse: collapse;
             border-radius: 5px;
-            width: 50%;
+            width: 70%;
+            margin-top: 20px;
         }
 
         th,
         td {
             padding: 8px;
             text-align: left;
+            border: 1px solid #ccc;
         }
 
         th {
-            background-color: #ccc;
+            background-color: #f2f2f2;
         }
 
         form:not(.del-form, .logout) {
@@ -84,11 +101,23 @@
 
         }
 
-
+        .menu-item,
         .logout-button {
-            position: absolute;
-            right: 10px;
-            top: 10px;
+            text-decoration: none;
+            background-color: #ccc;
+            color: black;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 4px;
+            box-sizing: border-box;
+            width: 100px;
+            text-align: center;
+        }
+
+        .menu-item:hover,
+        .logout-button:hover {
+            background-color: rgb(94, 96, 94);
         }
 
         label {
@@ -110,16 +139,14 @@
 </head>
 <body>
 
-<form class="logout" action="/admin/logout" method="POST">
-    <button class="logout-button" type="submit">Logout</button>
-</form>
-
-<ul>
-    <li><a href="/url">URL</a></li>
-</ul>
+<div class="header">
+    <a class="menu-item" href="/url">URL</a>
+    <form class="logout" action="/admin/logout" method="POST">
+        <button class="logout-button" type="submit">Logout</button>
+    </form>
+</div>
 
 <h2>HELLO ADMIN</h2>
-
 
 <form action="/admin" method="POST">
     <input
@@ -166,16 +193,21 @@
 <div style="margin-top: 20px"></div>
 
 <!-- Main table for displaying users and their links -->
-<table>
+<table class="main_table">
     <thead>
-    <th>ID</th>
-    <th>NAME</th>
-    <th>SURNAME</th>
-    <th>EMAIL</th>
-    <th>ROLE</th>
-    <th>CREATED_TIME</th>
-    <th>ACTION</th>
-    <th>RATE LIMIT</th>
+    <tr>
+        <th colspan="8" style="background-color: #ccc; text-align: center; font-weight: bold;">User Data</th>
+    </tr>
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>SURNAME</th>
+        <th>EMAIL</th>
+        <th>ROLE</th>
+        <th>CREATED_TIME</th>
+        <th>ACTION</th>
+        <th>RATE LIMIT</th>
+    </tr>
     </thead>
     <tbody>
     <% for (let user of users) { %>
@@ -202,24 +234,54 @@
         <!-- Sub-table for displaying user URLs -->
         <tr>
             <td colspan="8">
-                <table>
+                <table class="sub_table">
                     <thead>
-                    <th>URL</th>
-                    <th>Visits</th>
+                    <tr>
+                        <th colspan="2" style="background-color: #f2f2f2; text-align: center; font-weight: bold;">URL
+                            Data
+                        </th>
+                        <th colspan="3" style="background-color: #f2f2f2; text-align: center; font-weight: bold;">Rate
+                            Limits
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>URL</th>
+                        <th>Visits</th>
+                        <th>User</th>
+                        <th>Code</th>
+                        <th>IP</th>
+                    </tr>
                     </thead>
                     <tbody>
                     <% if (user.urls && user.urls.length > 0) { %>
                         <% for (let url of user.urls) { %>
                             <tr>
+                                <!-- Данные URL-адреса -->
                                 <td><a href="<%= url.url %>"><%= url.name %></a></td>
                                 <td><%= url.visits %></td>
+                                <td>
+                                    <form class="del-form" action="/admin/deleteRateLimitsByUser" method="POST">
+                                        <input type="hidden" name="user_id" value="<%= user.user_id %>">
+                                        <button type="submit">Delete</button>
+                                    </form>
+                                </td>
+                                <td>
+                                    <form class="del-form" action="/admin/deleteRateLimitsByCode" method="POST">
+                                        <input type="hidden" name="user_id" value="<%= user.user_id %>">
+                                        <button type="submit">Delete</button>
+                                    </form>
+                                </td>
+                                <td>
+                                    <form class="del-form" action="/admin/deleteRateLimitsByIp" method="POST">
+                                        <input type="hidden" name="user_id" value="<%= user.user_id %>">
+                                        <button type="submit">Delete</button>
+                                    </form>
+                                </td>
+
                             </tr>
                         <% } %>
-                    <% } else { %>
-                        <tr>
-                            <td colspan="2">No links</td>
-                        </tr>
                     <% } %>
+
                     </tbody>
                 </table>
             </td>

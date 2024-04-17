@@ -24,8 +24,6 @@ export default class AdminController extends Router {
 
     init = () => {
         this.get('/', async (req, res) => {
-            console.log("SSSSSSSSSSSSSSSSSSSSSSSSS" + JSON.stringify(req.session))
-            console.log(JSON.stringify(req.session.user))
             if (req.session.user && req.session.user.role === 'admin') {
                 const users = await this.userService.getUsersPublicData();
                 for (const user of users) {
@@ -86,6 +84,53 @@ export default class AdminController extends Router {
 
                 for (const ip of ip_addresses) {
 
+                    await this.rateLimit.deleteRateLimitByIP(ip);
+                }
+                res.redirect('/admin');
+            } catch (error) {
+                log.error('Error deleting rate limits:', error);
+                res.status(500).send('Error deleting rate limits');
+            }
+        });
+
+        this.post('/deleteRateLimitsByUser', urlEncodedParser, async (req, res) => {
+            console.log("Rate Limit body" + JSON.stringify(req.body))
+            const user_id = req.body.user_id;
+            console.log("Rate Limit user_id" + JSON.stringify(user_id))
+            try {
+                await this.rateLimit.deleteRateLimitByUserId(user_id);
+                res.redirect('/admin');
+            } catch (error) {
+                log.error('Error deleting rate limits:', error);
+                res.status(500).send('Error deleting rate limits');
+            }
+        });
+
+        this.post('/deleteRateLimitsByCode', urlEncodedParser, async (req, res) => {
+            console.log("Rate Limit body" + JSON.stringify(req.body))
+            const user_id = req.body.user_id;
+            console.log("Rate Limit user_id" + JSON.stringify(user_id))
+            try {
+                const urls = await this.urlService.getUrlsByUserId(user_id)
+                for (const url of urls) {
+                    await this.rateLimit.deleteRateLimitByUrlCode(url.code);
+                }
+                res.redirect('/admin');
+            } catch (error) {
+                log.error('Error deleting rate limits:', error);
+                res.status(500).send('Error deleting rate limits');
+            }
+        });
+
+
+        this.post('/deleteRateLimitsByIp', urlEncodedParser, async (req, res) => {
+            console.log("Rate Limit body" + JSON.stringify(req.body))
+            const user_id = req.body.user_id;
+            console.log("Rate Limit user_id" + JSON.stringify(user_id))
+            try {
+                const ip_addresses = await this.ipService.getUserIpAddresses(user_id)
+
+                for (const ip of ip_addresses) {
                     await this.rateLimit.deleteRateLimitByIP(ip);
                 }
                 res.redirect('/admin');

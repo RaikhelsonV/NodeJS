@@ -2,6 +2,7 @@ import UrlController from './controllers/UrlController.js';
 import UserController from './controllers/UserController.js';
 import CodeController from './controllers/CodeController.js';
 import AdminController from "./controllers/AdminController.js";
+import RateLimit from './middlewares/RateLimit.js';
 import session from 'express-session';
 import cookieParser from 'cookie-parser';
 import RedisStore from 'connect-redis';
@@ -13,10 +14,13 @@ let redisStore = new RedisStore({
     client: redisClient,
 });
 
+
+const rateLimitInstance = new RateLimit(redisClient);
 const userController = new UserController();
 const urlController = new UrlController(redisClient);
-const codeController = new CodeController(redisClient);
+const codeController = new CodeController(redisClient, rateLimitInstance);
 const adminController = new AdminController(redisClient);
+
 
 
 function initMiddlewares(app) {
