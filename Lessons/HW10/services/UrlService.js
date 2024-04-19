@@ -3,6 +3,7 @@ import UrlRepository from '../repository/UrlRepository.js';
 import UrlModel from '../models/urlModel.js';
 import {generateHash} from '../utils/randomCode.js';
 import appLogger from "appLogger";
+import {sendVisitsUpdate, sendTopFive, sendTopFiveByUser, sendAllUserLinksCountUpdate} from "../webSocket.js";
 
 const log = appLogger.getLogger('UrlService.js');
 const CODE_LENGTH = 10;
@@ -29,9 +30,20 @@ export default class UrlService {
 
     }
 
-    async addVisit(code) {
+    async addVisit(user_id, code) {
         await this.urlRepository.addVisit(code);
+        console.log("USERID " +user_id)
+        try {
+            const allUrlsByUser = await this.getUrlsByUserId(user_id);
+            const visitsData = allUrlsByUser.map(url => ({name: url.name, visits: url.visits}));
+            sendVisitsUpdate(visitsData);
+            return visitsData;
+        } catch (error) {
+            log.error('Error fetching visit data:', error);
+            throw error;
+        }
     }
+
 
     async updateEnabledStatus(code, status) {
         await this.urlRepository.updateEnabledStatus(code, status);
@@ -79,20 +91,36 @@ export default class UrlService {
     }
 
     async getUrlsByUser(user) {
-        return this.formatUrls(await this.urlRepository.getUrlByUser(user));
+        const allUrlsByUser = this.formatUrls(await this.urlRepository.getUrlByUser(user));
+        return allUrlsByUser;
     }
 
+
     async getUrlsByUserId(user_id) {
-        return this.formatUrls(await this.urlRepository.getUrlByUserId(user_id));
+        console.log("getUrlsByUserId")
+
+        const allUrlsByUser = this.formatUrls(await this.urlRepository.getUrlByUserId(user_id));
+        for (const url of allUrlsByUser) {
+            console.log("got it " + JSON.stringify(url))
+        }
+
+        console.log(allUrlsByUser.length)
+
+        sendAllUserLinksCountUpdate(allUrlsByUser.length)
+        return allUrlsByUser;
     }
 
 
     async getTopFiveUrlsByUser(user_id) {
-        return this.formatUrls(await this.urlRepository.getTopFiveVisitedUrlsByUserId(user_id));
+        const topUrlsByUser = this.formatUrls(await this.urlRepository.getTopFiveVisitedUrlsByUserId(user_id));
+        sendTopFiveByUser(topUrlsByUser)
+        return topUrlsByUser;
     }
 
     async getTopFiveUrls() {
-        return this.formatUrls(await this.urlRepository.getTopFiveVisitedUrls());
+        const topUrls = this.formatUrls(await this.urlRepository.getTopFiveVisitedUrls());
+        sendTopFive(topUrls)
+        return topUrls;
     }
 
     formatUrls(urls) {
@@ -102,6 +130,7 @@ export default class UrlService {
                 code: url.code,
                 name: url.name,
                 url: url.url,
+                user_id: url.user_id,
                 enabled: url.enabled,
                 visits: url.visits,
                 type: url.type,

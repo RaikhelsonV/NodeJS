@@ -30,7 +30,8 @@
             text-align: left;
 
         }
-        table .code , .enabled{
+
+        table .code, .enabled {
             width: 10%;
             word-break: break-all;
         }
@@ -115,7 +116,8 @@
 <body>
 
 <div class="header">
-    <a class="menu-item" href="/dashboard">DASHBOARD</a>
+    <a class="menu-item" href="/wsDashboard.html">DASHBOARD</a>
+
     <form class="logout" action="/user/logout" method="POST">
         <button class="logout-button" type="submit">Logout</button>
     </form>
@@ -190,10 +192,16 @@
             <td>
                 <form class="upd-form" action="/url/updateType" method="POST">
                     <input type="hidden" name="code" value="<%= url.code %>">
-                    <select class="upd-sel" name="type"  onchange="this.form.submit()">
-                        <option class="upd-opt" value="one_time" <%= url.type === 'one_time' ? 'selected' : '' %>>One-Time</option>
-                        <option class="upd-opt" value="temporary" <%= url.type === 'temporary' ? 'selected' : '' %>>Temporary</option>
-                        <option class="upd-opt" value="permanent" <%= url.type === 'permanent' ? 'selected' : '' %>>Permanent</option>
+                    <select class="upd-sel" name="type" onchange="this.form.submit()">
+                        <option class="upd-opt" value="one_time" <%= url.type === 'one_time' ? 'selected' : '' %>>
+                            One-Time
+                        </option>
+                        <option class="upd-opt" value="temporary" <%= url.type === 'temporary' ? 'selected' : '' %>>
+                            Temporary
+                        </option>
+                        <option class="upd-opt" value="permanent" <%= url.type === 'permanent' ? 'selected' : '' %>>
+                            Permanent
+                        </option>
                     </select>
 
                 </form>
@@ -204,7 +212,9 @@
                 <% if (url.expire_at !== null || url.type === 'temporary') { %>
                     <form class="upd-form" action="/url/updateDate" method="POST">
                         <input type="hidden" name="code" value="<%= url.code %>">
-                        <input id="expireDateInput" type="date" name="expire_at" value="<%= new Date(url.expire_at).toISOString().substr(0,10) %>" onchange="this.form.submit()">
+                        <input id="expireDateInput" type="date" name="expire_at"
+                               value="<%= new Date(url.expire_at).toISOString().substr(0, 10) %>"
+                               onchange="this.form.submit()">
                     </form>
                 <% } else { %>
                     <input type="hidden" name="expire_at">
@@ -222,6 +232,7 @@
             </td>
             <td>
                 <form class="del-form" action="/url/delete" method="POST">
+                    <input type="hidden" name="user_id" value="<%= url.user_id %>">
                     <input type="hidden" name="code" value="<%= url.code %>">
                     <button type="submit">Delete</button>
                 </form>
@@ -264,12 +275,13 @@
 
         if (selectType.value === 'temporary' && !expireDateField.value) {
             alert('Please select expiration date for temporary URL');
-            return false; // Отменяем отправку формы
+            return false;
         }
 
 
-        return true; // Продолжаем отправку формы
+        return true;
     }
+
 
 
 </script>

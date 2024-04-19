@@ -4,9 +4,9 @@ import UserService from "../services/UserService.js";
 import UserRepository from '../repository/UserRepository.js';
 import {jsonParser, urlEncodedParser} from '../middlewares/authMiddleware.js';
 import authMiddleware from '../middlewares/authMiddleware.js';
-import {sendAllUserLinksCountUpdate} from "../webSocket.js";
 import appLogger from "appLogger";
 import RateLimit from "../middlewares/RateLimit.js";
+
 
 const log = appLogger.getLogger('UrlController.js');
 
@@ -43,11 +43,10 @@ export default class UrlController extends Router {
                 req.user = user;
 
                 await this.urlService.addUrl({name, url, code, type, expire_at: expireDate}, req.user);
-                const urls = await this.urlService.getUrlsByUser(user)
-                sendAllUserLinksCountUpdate(urls.length)
 
                 addSuccess = true;
                 res.redirect(`/url?addSuccess=${addSuccess}`);
+
                 return;
             } catch (error) {
                 res.render('url', {
@@ -125,11 +124,14 @@ export default class UrlController extends Router {
         });
 
         this.post('/delete', urlEncodedParser, async (req, res) => {
+            console.log("DEEEELETE " + JSON.stringify(req.body))
             const code = req.body.code;
+            const userId = req.body.user_id;
+
             try {
                 const result = await this.urlService.deleteUrl(code);
 
-                await this.rateLimit.deleteRateLimitByUrlCode(code);
+                await this.rateLimit.deleteRateLimitByUrlCode(userId, code);
 
                 const deleteSuccess = result;
 

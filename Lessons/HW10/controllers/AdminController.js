@@ -78,7 +78,7 @@ export default class AdminController extends Router {
                 const urls = await this.urlService.getUrlsByUserId(user_id)
 
                 for (const url of urls) {
-                    await this.rateLimit.deleteRateLimitByUrlCode(url.code);
+                    await this.rateLimit.deleteRateLimitByUrlCode(user_id,url.code);
                 }
                 const ip_addresses = await this.ipService.getUserIpAddresses(user_id)
 
@@ -113,7 +113,7 @@ export default class AdminController extends Router {
             try {
                 const urls = await this.urlService.getUrlsByUserId(user_id)
                 for (const url of urls) {
-                    await this.rateLimit.deleteRateLimitByUrlCode(url.code);
+                    await this.rateLimit.deleteRateLimitByUrlCode(user_id,url.code);
                 }
                 res.redirect('/admin');
             } catch (error) {

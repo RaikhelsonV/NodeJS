@@ -1,20 +1,25 @@
+import {Router} from 'express';
+import {publicIpv4} from 'public-ip';
+import appLogger from "appLogger";
 import UserService from '../services/userService.js';
 import UrlService from "../services/UrlService.js";
 import IpService from "../services/IpService.js";
-import {Router} from 'express';
+import DashboardService from "../services/DashboardService.js";
 import {jsonParser, urlEncodedParser} from '../middlewares/authMiddleware.js';
-import {publicIpv4} from 'public-ip';
-import appLogger from "appLogger";
-
+import RateLimit from "../middlewares/RateLimit.js";
 
 const log = appLogger.getLogger('UserController.js');
 
 export default class UserController extends Router {
-    constructor() {
+    constructor(redisClient) {
         super();
         this.userService = new UserService();
         this.urlService = new UrlService();
         this.ipService = new IpService();
+        this.redisClient = redisClient;
+        this.rateLimit = new RateLimit(this.redisClient);
+        this.dashboardService = new DashboardService(this.rateLimit);
+
         this.init();
     }
 
@@ -48,6 +53,7 @@ export default class UserController extends Router {
                     } else {
                         res.redirect('/url');
                     }
+                    await this.dashboardService.sendDataToDashBoard(user.user_id)
                 }
             } catch (error) {
                 log.error('Error logging in:', error);
@@ -83,6 +89,8 @@ export default class UserController extends Router {
                 } else {
                     res.redirect('/url');
                 }
+                await this.dashboardService.sendDataToDashBoard(newUser.user_id)
+
             } catch (error) {
                 log.error('Error creating user:', error);
                 if (error.message === 'User with this email already exists') {

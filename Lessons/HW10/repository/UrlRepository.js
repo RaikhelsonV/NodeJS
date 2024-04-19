@@ -121,7 +121,7 @@ export default class UrlRepository {
     async getUrlByUser(user) {
         try {
             const urls = await UrlModelObj.query().where('user_id', user.user_id);
-            log.debug('DB All url by user' + JSON.stringify(urls));
+            // log.debug('DB All url by user' + JSON.stringify(urls));
             return urls;
         } catch (error) {
             log.error('Error getting URLs by user:', error);
@@ -131,7 +131,7 @@ export default class UrlRepository {
     async getUrlByUserId(user_id) {
         try {
             const urls = await UrlModelObj.query().where('user_id', user_id);
-            log.debug('DB All url by user' + JSON.stringify(urls));
+            log.debug('DB All url by user ID' + JSON.stringify(urls.length));
             return urls;
         } catch (error) {
             log.error('Error getting URLs by user:', error);

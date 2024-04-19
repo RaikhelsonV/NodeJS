@@ -40,6 +40,7 @@
         .visit-count {
             color: blue;
         }
+
         .flex-container {
             display: flex;
             flex-wrap: wrap;
@@ -47,6 +48,7 @@
             margin: 0 auto;
             max-width: 800px;
         }
+
         .flex-container > .container {
             flex-basis: 38%;
             margin-bottom: 20px;
@@ -100,22 +102,30 @@
         if (data.type === 'countUpdate') {
             document.getElementById('totalLinksCount').innerText = `Number of created links: ${data.data}`;
         } else if (data.type === 'visitsUpdate') {
+            console.log(data.type)
+            console.log(data.data)
             const visitsContainer = document.getElementById('visitsContainer');
+            visitsContainer.innerHTML = ''; // Очищаем контейнер перед добавлением новых данных
 
-            const visitItem = document.createElement('div');
-            visitItem.classList.add('visit-item');
+            data.data.forEach(one => {
+                console.log("bbbbbbbbbb " + JSON.stringify(one))
 
-            const nameElement = document.createElement('span');
-            nameElement.classList.add('visit-name');
-            nameElement.innerText = data.data.name;
+                const visitItem = document.createElement('div');
+                visitItem.classList.add('visit-item');
 
-            const visitsElement = document.createElement('span');
-            visitsElement.classList.add('visit-count');
-            visitsElement.innerText = data.data.visits;
+                const nameElement = document.createElement('span');
+                nameElement.classList.add('visit-name');
+                nameElement.innerText = one.name;
 
-            visitItem.appendChild(nameElement);
-            visitItem.appendChild(visitsElement);
-            visitsContainer.appendChild(visitItem);
+                const visitsElement = document.createElement('span');
+                visitsElement.classList.add('visit-count');
+                visitsElement.innerText = one.visits;
+
+                visitItem.appendChild(nameElement);
+                visitItem.appendChild(visitsElement);
+
+                visitsContainer.appendChild(visitItem);
+            });
 
         } else if (data.type === 'topUpdate') {
             const topLinksContainer = document.getElementById('topFiveLinks');
@@ -159,8 +169,7 @@
 
                 topLinksContainer.appendChild(linkElement);
             });
-        }
-        else if (data.type === 'rateLimits') {
+        } else if (data.type === 'rateLimits') {
             const rateLimitsContainer = document.getElementById('rateLimitsByCode');
             rateLimitsContainer.innerHTML = '';
 
@@ -174,7 +183,7 @@
 
                 const codeValueElement = document.createElement('span');
                 codeValueElement.classList.add('url-visits');
-                codeValueElement.innerText = rateLimits.limit;
+                codeValueElement.innerText = rateLimits.percentage + '%';
 
                 rlElement.appendChild(codeKeyElement);
                 rlElement.appendChild(codeValueElement);

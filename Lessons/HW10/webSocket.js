@@ -17,17 +17,9 @@ function init(server) {
     });
 }
 
-function sendVisitsUpdate(visitsData) {
-    if (wss) {
-        wss.clients.forEach(client => {
-            if (client.readyState === WebSocket.OPEN) {
-                console.log("web socket open")
-                client.send(JSON.stringify({type: 'visitsUpdate', data: visitsData}));
-            }
-        });
-    }
-}
+
 function sendAllUserLinksCountUpdate(count) {
+    console.log("sendAllUserLinksCountUpdate " + count)
     if (wss) {
         wss.clients.forEach(client => {
             if (client.readyState === WebSocket.OPEN) {
@@ -60,6 +52,20 @@ function sendRateLimitByCode(limitList) {
         wss.clients.forEach(client => {
             if (client.readyState === WebSocket.OPEN) {
                 client.send(JSON.stringify({type: 'rateLimits', data: limitList}));
+            }
+        });
+    }
+}
+function sendVisitsUpdate(visitsData) {
+    console.log("sendVisitsUpdate")
+    for (const  one of visitsData){
+        console.log("bbbbbbbbbb " +JSON.stringify(one))
+    }
+    if (wss) {
+        wss.clients.forEach(client => {
+            if (client.readyState === WebSocket.OPEN) {
+                console.log("web socket open")
+                client.send(JSON.stringify({type: 'visitsUpdate', data: visitsData}));
             }
         });
     }

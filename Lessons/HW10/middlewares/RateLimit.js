@@ -1,5 +1,7 @@
 import config from '../config.js';
 import appLogger from "appLogger";
+import {sendRateLimitByCode} from "../webSocket.js";
+import UrlService from "../services/UrlService.js";
 
 const log = appLogger.getLogger('RateLimit.js');
 
@@ -7,6 +9,7 @@ export default class RateLimit {
 
     constructor(redisClient) {
         this.redisClient = redisClient;
+        this.urlService = new UrlService();
     }
 
     async checkRateLimit(keys, resourceType) {
@@ -44,11 +47,13 @@ export default class RateLimit {
         }
     }
 
-    async deleteRateLimitByUrlCode(code) {
+    async deleteRateLimitByUrlCode(user_id, code) {
+        console.log("DELLLLLLLLLLLLLLL", user_id, code)
         const urlKey = `rateLimitCodeUrl:/${code}`;
 
         try {
             await this.redisClient.del(urlKey);
+            await this.getLimitsListByUser(user_id);
 
             console.log(`Rate limits deleted for code: ${code}`);
         } catch (error) {
@@ -71,10 +76,42 @@ export default class RateLimit {
         }
     }
 
+
+    async getLimitsListByUser(user_id) {
+        const allUrlsByUser = await this.urlService.getUrlsByUserId(user_id)
+        const limitsList = [];
+
+        for (const url of allUrlsByUser) {
+
+            console.log("FirstUrl: " + JSON.stringify(url)); // Пример операции с URL
+            let limitByCode = await this.getValueByKey(url.code)
+
+            const {duration, limit} = config.rateLimits["url"];
+
+            let percentage = (limitByCode / limit) * 100;
+            if (isNaN(percentage) || !isFinite(percentage)) {
+                percentage = 0;
+            } else {
+                percentage = Math.min(100, Math.max(0, percentage));
+            }
+            const limitInfo = {code: url.code, limit: limitByCode, percentage: percentage.toFixed(0)};
+
+            limitsList.push(limitInfo);
+        }
+
+        console.log(limitsList);
+        sendRateLimitByCode(limitsList)
+
+        return limitsList;
+    }
+
     async getValueByKey(code) {
+        console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+        console.log("aaaa")
         const urlKey = `rateLimitCodeUrl:/${code}`;
         try {
-            return await this.redisClient.get(urlKey);
+            const limit = await this.redisClient.get(urlKey);
+            return limit;
         } catch (error) {
             log.error('Error getting value by key:', error);
             throw error;
