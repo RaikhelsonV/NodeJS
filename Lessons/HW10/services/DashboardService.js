@@ -10,10 +10,13 @@ export default class DashboardService {
     }
 
     sendDataToDashBoard = async (user_id) => {
-        const topUrlsByUser = await this.urlService.getTopFiveUrlsByUser(user_id);
-        const urls = await this.urlService.getTopFiveUrls();
+        const top5Urls = await this.urlService.getTopFiveUrls();
+        const top5UrlsByUser = await this.urlService.getTopFiveUrlsByUser(user_id);
+
         const allUrlsByUser = await this.urlService.getUrlsByUserId(user_id);
         const limitsList = await this.rateLimit.getLimitsListByUser(user_id);
+
+        return {top5Urls, top5UrlsByUser, allUrlsByUser, limitsList};
     }
 
 

@@ -102,14 +102,10 @@
         if (data.type === 'countUpdate') {
             document.getElementById('totalLinksCount').innerText = `Number of created links: ${data.data}`;
         } else if (data.type === 'visitsUpdate') {
-            console.log(data.type)
-            console.log(data.data)
             const visitsContainer = document.getElementById('visitsContainer');
-            visitsContainer.innerHTML = ''; // Очищаем контейнер перед добавлением новых данных
+            visitsContainer.innerHTML = '';
 
             data.data.forEach(one => {
-                console.log("bbbbbbbbbb " + JSON.stringify(one))
-
                 const visitItem = document.createElement('div');
                 visitItem.classList.add('visit-item');
 

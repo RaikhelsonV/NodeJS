@@ -2,12 +2,14 @@ import UrlController from './controllers/UrlController.js';
 import UserController from './controllers/UserController.js';
 import CodeController from './controllers/CodeController.js';
 import AdminController from "./controllers/AdminController.js";
+import DashboardController from "./controllers/DashboardController.js";
 import RateLimit from './middlewares/RateLimit.js';
 import session from 'express-session';
 import cookieParser from 'cookie-parser';
 import RedisStore from 'connect-redis';
 import redisClient from "./redis/redisClient.js";
 import express from "express";
+
 
 
 
@@ -21,6 +23,7 @@ const userController = new UserController(redisClient);
 const urlController = new UrlController(redisClient);
 const codeController = new CodeController(redisClient, rateLimitInstance);
 const adminController = new AdminController(redisClient);
+const dashboardController =  new DashboardController(redisClient);
 
 
 
@@ -45,7 +48,8 @@ function initControllers(app) {
     app.use('/url', urlController);
     app.use('/code', codeController);
     app.use('/user', userController);
-    app.use('/admin', adminController)
+    app.use('/admin', adminController);
+    app.use('/dashboard', dashboardController);
     app.use(express.static("D:/NodeJS/Lessons/HW10/dash/"));
 }
 

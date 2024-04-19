@@ -23,6 +23,20 @@ export default class UrlController extends Router {
     }
 
     init = () => {
+
+        this.get('/info/:code', async (req, res) => {
+            const code = req.params.code;
+            const urlData = await this.urlService.getUrlInfo(code);
+            res.json(urlData);
+        });
+
+        this.get('/', async (req, res) => {
+            const user = await this.userRepository.getUserByName(req.user.name);
+            const userUrls = await this.urlService.getUrlsByUser(user);
+            await this.urlService.updateExpiredUrls(userUrls)
+            res.render('url', {userUrls, deleteSuccess: false, addSuccess: false, error: null});
+        });
+
         this.post('/add', jsonParser, async (req, res) => {
             const code = await this.urlService.addUrl(req.body, req.user);
             res.json({code});
@@ -109,19 +123,6 @@ export default class UrlController extends Router {
             }
         });
 
-        this.get('/info/:code', async (req, res) => {
-            const code = req.params.code;
-            const urlData = await this.urlService.getUrlInfo(code);
-            res.json(urlData);
-        });
-
-        this.get('/', async (req, res) => {
-            const user = await this.userRepository.getUserByName(req.user.name);
-            const userUrls = await this.urlService.getUrlsByUser(user);
-            await this.urlService.updateExpiredUrls(userUrls)
-
-            res.render('url', {userUrls, deleteSuccess: false, addSuccess: false, error: null});
-        });
 
         this.post('/delete', urlEncodedParser, async (req, res) => {
             console.log("DEEEELETE " + JSON.stringify(req.body))
