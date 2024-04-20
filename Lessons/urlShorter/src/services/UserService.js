@@ -34,8 +34,8 @@ export default class UserService {
         try {
             await this.userRepository.deleteUserAndAssociatedData(user_id);
         } catch (error) {
-            log.error('Error,' + error);
-            throw new ValidationError('Error');
+            log.error(`Error deleting user with ID ${user_id}: ${error}`);
+            throw new ValidationError(`Failed to delete user with ID ${user_id}`);
         }
     }
 
