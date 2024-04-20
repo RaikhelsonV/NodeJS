@@ -14,7 +14,7 @@ const httpServer = http.createServer((req, res) => {
 });
 
 httpServer.listen(config.httpPort, () => {
-    console.log('Server started');
+    console.log('Server logger - started');
 });
 
 async function addToLogCache(

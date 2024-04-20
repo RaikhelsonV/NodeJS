@@ -5,7 +5,6 @@ import HashPassword from "../../utils/HashPassword.js";
 import {jest} from "@jest/globals";
 import {UserRoles} from "../../models/userRoles.js";
 
-
 const NAME = 'John';
 const SURNAME = 'Doe';
 const PASSWORD = 'password123';

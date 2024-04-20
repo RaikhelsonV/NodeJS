@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const defaultConfig = {
-    logLevel: constants.level.INFO,
+    logLevel: constants.level.TRACE,
     appender: constants.appender.CONSOLE,
     formatter: constants.format.DEFAULT,
     host: constants.network.host,

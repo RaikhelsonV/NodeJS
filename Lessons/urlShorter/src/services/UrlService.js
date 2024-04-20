@@ -32,7 +32,6 @@ export default class UrlService {
 
     async addVisit(user_id, code) {
         await this.urlRepository.addVisit(code);
-        console.log("USERID " +user_id)
         try {
             const allUrlsByUser = await this.getUrlsByUserId(user_id);
             const visitsData = allUrlsByUser.map(url => ({name: url.name, visits: url.visits}));
