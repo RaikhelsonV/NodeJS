@@ -44,7 +44,7 @@ const logger = (category) => ({
 const appender = appenderStrategy.getAppender();
 
 async function executeLog(level, category, message) {
-    if (constants.scoreLevel[level] < config.scoreLevel) {
+    if (constants.scoreLevel[level] <= config.scoreLevel) {
         await addToLogCache(
             formatDate(),
             level,

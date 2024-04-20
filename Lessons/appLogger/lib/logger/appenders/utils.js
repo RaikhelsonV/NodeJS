@@ -1,5 +1,5 @@
 import * as constants from '../constants.js';
-import { stringify } from 'csv-stringify';
+import {stringify} from 'csv-stringify';
 
 async function formatMessage(
     date,
@@ -10,11 +10,11 @@ async function formatMessage(
     fileName
 ) {
     if (formatter === constants.format.JSON) {
-        return formatJSON({ date, level, category, message, fileName });
+        return formatJSON({date, level, category, message, fileName});
     } else if (formatter === constants.format.CSV) {
-        return formatCSV([{ date, level, category, message, fileName }]);
+        return formatCSV([{date, level, category, message, fileName}]);
     } else {
-        return formatDefault({ date, level, category, message, fileName });
+        return formatDefault({date, level, category, message, fileName});
     }
 }
 
@@ -24,7 +24,7 @@ function formatJSON(logData) {
 }
 
 async function formatCSV(logData) {
-    return await stringifyAsync(logData, { header: false });
+    return await stringifyAsync(logData, {header: false});
 }
 
 async function stringifyAsync(logData, options) {
@@ -43,4 +43,4 @@ function formatDefault(logData) {
     return `Date: ${logData.date}, category: ${logData.category}, level: ${logData.level}, message: ${logData.message}, fileName: ${logData.fileName}\n`;
 }
 
-export { formatMessage };
+export {formatMessage};
